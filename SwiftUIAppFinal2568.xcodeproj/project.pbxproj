@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95454EB92DCE24BC00DD5D75 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95454EB82DCE24BC00DD5D75 /* MainView.swift */; };
 		E161D9E82DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E161D9E72DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift */; };
 		E161D9EA2DC22C1D00F0D451 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E161D9E92DC22C1D00F0D451 /* ContentView.swift */; };
 		E161D9EC2DC22C1E00F0D451 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E161D9EB2DC22C1E00F0D451 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95454EB82DCE24BC00DD5D75 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E161D9E42DC22C1D00F0D451 /* SwiftUIAppFinal2568.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIAppFinal2568.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E161D9E72DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAppFinal2568App.swift; sourceTree = "<group>"; };
 		E161D9E92DC22C1D00F0D451 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				E161D9E72DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift */,
+				95454EB82DCE24BC00DD5D75 /* MainView.swift */,
 				E161D9E92DC22C1D00F0D451 /* ContentView.swift */,
 				E161D9EB2DC22C1E00F0D451 /* Assets.xcassets */,
 				E161D9ED2DC22C1E00F0D451 /* Preview Content */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E161D9EA2DC22C1D00F0D451 /* ContentView.swift in Sources */,
+				95454EB92DCE24BC00DD5D75 /* MainView.swift in Sources */,
 				E161D9E82DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
