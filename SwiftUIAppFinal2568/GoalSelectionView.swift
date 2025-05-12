@@ -5,60 +5,93 @@
 //  Created by Poowit Somsak on 12/5/2568 BE.
 //
 
-import Foundation
 import SwiftUI
 
+struct Goal: Identifiable, Hashable {
+    let id = UUID()
+    let title: String
+    let imageName: String
+}
+
 struct GoalSelectionView: View {
-    @State private var selectedGoals: Set<String> = []
-    let goals = ["Fat Loss", "Weight Gain", "Muscle Building"]
+    @State private var selectedGoals: Set<Goal> = []
+
+    let goals: [Goal] = [
+        Goal(title: "Fat Loss", imageName: "fatloss"),
+        Goal(title: "Weight Gain", imageName: "weightgain"),
+        Goal(title: "Just exercise For Health", imageName: "health")
+    ]
 
     var body: some View {
-        ScrollView {
-            VStack(spacing: 20) {
-                Text("Choose Your Goals")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
+        NavigationStack {
+            ScrollView {
+                VStack(spacing: 20) {
+                    Text("Choose Your Goals")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding(.top)
 
-                ForEach(goals, id: \.self) { goal in
-                    HStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.white.opacity(0.2))
-                            .frame(width: 100, height: 60)
-                            .overlay(Text(goal.prefix(1)).font(.largeTitle).foregroundColor(.white))
-                        
-                        Text(goal)
-                            .foregroundColor(.white)
-                            .font(.headline)
+                    ForEach(goals) { goal in
+                        HStack {
+                            ZStack {
+                                Image(goal.imageName)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(height: 120)
+                                    .clipped()
+                                    .cornerRadius(12)
 
-                        Spacer()
+                                Rectangle()
+                                    .foregroundColor(.black.opacity(0.3))
+                                    .cornerRadius(12)
 
-                        Button(action: {
-                            if selectedGoals.contains(goal) {
-                                selectedGoals.remove(goal)
-                            } else {
-                                selectedGoals.insert(goal)
+                                Text(goal.title)
+                                    .foregroundColor(.white)
+                                    .font(.headline)
                             }
-                        }) {
-                            Image(systemName: selectedGoals.contains(goal) ? "checkmark.square.fill" : "square")
-                                .foregroundColor(.white)
-                                .font(.title2)
-                        }
-                    }
-                    .padding(.horizontal)
-                }
+                            .frame(maxWidth: .infinity)
 
-                Button("Continue") {
-                    // ยังไม่เชื่อม backend
+                            Button(action: {
+                                if selectedGoals.contains(goal) {
+                                    selectedGoals.remove(goal)
+                                } else {
+                                    selectedGoals.insert(goal)
+                                }
+                            }) {
+                                Image(systemName: selectedGoals.contains(goal) ? "checkmark.square.fill" : "square")
+                                    .font(.title2)
+                                    .foregroundColor(.white)
+                            }
+                            .padding(.leading, 10)
+                        }
+                        .frame(height: 120)
+                        .padding(.horizontal)
+                    }
+
+                    Button("Continue") {
+                        print(selectedGoals.map { $0.title })
+                    }
+                    .font(.headline)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.white)
+                    .foregroundColor(.purple)
+                    .cornerRadius(14)
+                    .padding(.horizontal)
+                    .padding(.top)
                 }
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.white)
-                .foregroundColor(.purple)
-                .cornerRadius(10)
+                .padding(.bottom)
             }
-            .padding()
+            .background(Color(hex: "#2F195F").edgesIgnoringSafeArea(.all))
         }
-        .background(Color(hex: "#2F195F").edgesIgnoringSafeArea(.all))
     }
 }
+
+struct GoalSelectionView_Previews: PreviewProvider {
+    static var previews: some View {
+        GoalSelectionView()
+            .previewDevice("iPhone 15")
+    }
+}
+    
