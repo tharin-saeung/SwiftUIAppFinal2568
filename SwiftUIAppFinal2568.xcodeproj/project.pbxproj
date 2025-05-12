@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		3028DAC52DD221A100E56379 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028DAC42DD221A100E56379 /* RegisterView.swift */; };
 		3028DAC72DD2220B00E56379 /* GoalSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028DAC62DD2220B00E56379 /* GoalSelectionView.swift */; };
+		3028DACB2DD2511E00E56379 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028DACA2DD2511E00E56379 /* MainTabView.swift */; };
+		3028DACD2DD252B600E56379 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028DACC2DD252B600E56379 /* DashboardView.swift */; };
+		3028DACF2DD254D100E56379 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028DACE2DD254D100E56379 /* WorkoutView.swift */; };
+		3028DAD12DD254DE00E56379 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028DAD02DD254DE00E56379 /* FoodView.swift */; };
+		3028DAD32DD2552800E56379 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028DAD22DD2552800E56379 /* ShopView.swift */; };
 		95454EB92DCE24BC00DD5D75 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95454EB82DCE24BC00DD5D75 /* LoginView.swift */; };
 		E161D9E82DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E161D9E72DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift */; };
 		E161D9EA2DC22C1D00F0D451 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E161D9E92DC22C1D00F0D451 /* ContentView.swift */; };
@@ -19,6 +24,11 @@
 /* Begin PBXFileReference section */
 		3028DAC42DD221A100E56379 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		3028DAC62DD2220B00E56379 /* GoalSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSelectionView.swift; sourceTree = "<group>"; };
+		3028DACA2DD2511E00E56379 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		3028DACC2DD252B600E56379 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		3028DACE2DD254D100E56379 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		3028DAD02DD254DE00E56379 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
+		3028DAD22DD2552800E56379 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		95454EB82DCE24BC00DD5D75 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E161D9E42DC22C1D00F0D451 /* SwiftUIAppFinal2568.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIAppFinal2568.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E161D9E72DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAppFinal2568App.swift; sourceTree = "<group>"; };
@@ -58,6 +68,11 @@
 			isa = PBXGroup;
 			children = (
 				E161D9E72DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift */,
+				3028DACA2DD2511E00E56379 /* MainTabView.swift */,
+				3028DAD22DD2552800E56379 /* ShopView.swift */,
+				3028DACE2DD254D100E56379 /* WorkoutView.swift */,
+				3028DAD02DD254DE00E56379 /* FoodView.swift */,
+				3028DACC2DD252B600E56379 /* DashboardView.swift */,
 				95454EB82DCE24BC00DD5D75 /* LoginView.swift */,
 				3028DAC42DD221A100E56379 /* RegisterView.swift */,
 				3028DAC62DD2220B00E56379 /* GoalSelectionView.swift */,
@@ -146,10 +161,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3028DAD12DD254DE00E56379 /* FoodView.swift in Sources */,
 				E161D9EA2DC22C1D00F0D451 /* ContentView.swift in Sources */,
 				3028DAC72DD2220B00E56379 /* GoalSelectionView.swift in Sources */,
+				3028DACF2DD254D100E56379 /* WorkoutView.swift in Sources */,
 				95454EB92DCE24BC00DD5D75 /* LoginView.swift in Sources */,
+				3028DACD2DD252B600E56379 /* DashboardView.swift in Sources */,
+				3028DACB2DD2511E00E56379 /* MainTabView.swift in Sources */,
 				3028DAC52DD221A100E56379 /* RegisterView.swift in Sources */,
+				3028DAD32DD2552800E56379 /* ShopView.swift in Sources */,
 				E161D9E82DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
