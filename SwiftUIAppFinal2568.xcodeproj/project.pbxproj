@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95454EB92DCE24BC00DD5D75 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95454EB82DCE24BC00DD5D75 /* TestView.swift */; };
+		3028DAC52DD221A100E56379 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028DAC42DD221A100E56379 /* RegisterView.swift */; };
+		3028DAC72DD2220B00E56379 /* GoalSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028DAC62DD2220B00E56379 /* GoalSelectionView.swift */; };
+		95454EB92DCE24BC00DD5D75 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95454EB82DCE24BC00DD5D75 /* LoginView.swift */; };
 		E161D9E82DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E161D9E72DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift */; };
 		E161D9EA2DC22C1D00F0D451 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E161D9E92DC22C1D00F0D451 /* ContentView.swift */; };
 		E161D9EC2DC22C1E00F0D451 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E161D9EB2DC22C1E00F0D451 /* Assets.xcassets */; };
@@ -15,7 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		95454EB82DCE24BC00DD5D75 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		3028DAC42DD221A100E56379 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		3028DAC62DD2220B00E56379 /* GoalSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSelectionView.swift; sourceTree = "<group>"; };
+		95454EB82DCE24BC00DD5D75 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E161D9E42DC22C1D00F0D451 /* SwiftUIAppFinal2568.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIAppFinal2568.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E161D9E72DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAppFinal2568App.swift; sourceTree = "<group>"; };
 		E161D9E92DC22C1D00F0D451 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,7 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				E161D9E72DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift */,
-				95454EB82DCE24BC00DD5D75 /* TestView.swift */,
+				95454EB82DCE24BC00DD5D75 /* LoginView.swift */,
+				3028DAC42DD221A100E56379 /* RegisterView.swift */,
+				3028DAC62DD2220B00E56379 /* GoalSelectionView.swift */,
 				E161D9E92DC22C1D00F0D451 /* ContentView.swift */,
 				E161D9EB2DC22C1E00F0D451 /* Assets.xcassets */,
 				E161D9ED2DC22C1E00F0D451 /* Preview Content */,
@@ -141,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E161D9EA2DC22C1D00F0D451 /* ContentView.swift in Sources */,
-				95454EB92DCE24BC00DD5D75 /* TestView.swift in Sources */,
+				3028DAC72DD2220B00E56379 /* GoalSelectionView.swift in Sources */,
+				95454EB92DCE24BC00DD5D75 /* LoginView.swift in Sources */,
+				3028DAC52DD221A100E56379 /* RegisterView.swift in Sources */,
 				E161D9E82DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
