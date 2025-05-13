@@ -45,20 +45,22 @@ struct LoginView: View {
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
                         .onChange(of: email, {
-                           if(checkValidity(email: email, password: password))
+                            if ((invalidEmail(email) != nil) || (invalidPassword(password) != nil))
                             {
-                               self.loginButtonDisabled = false
-                           }
-                            else if (!loginButtonDisabled) {
                                 self.loginButtonDisabled = true
+                                if (invalidEmail(email) != nil)
+                                {
+                                    errorMessage = invalidEmail(email)
+                                }
+                                else if (invalidPassword(password) != nil)
+                                {
+                                    errorMessage = invalidPassword(password)
+                                }
                             }
-                            else if (invalidEmail(email) != nil)
+                            else
                             {
-                                errorMessage = invalidEmail(email)
-                            }
-                            else if (invalidPassword(password) != nil)
-                            {
-                                errorMessage = invalidPassword(password)
+                                self.loginButtonDisabled = false
+                                errorMessage = nil
                             }
                         })
                     
@@ -68,20 +70,22 @@ struct LoginView: View {
                         .cornerRadius(10)
                         .foregroundColor(.white)
                         .onChange(of: password, {
-                           if(checkValidity(email: email, password: password))
+                            if (invalidEmail(email) != nil || invalidPassword(password) != nil)
                             {
-                               self.loginButtonDisabled = false
-                           }
-                            else if (!loginButtonDisabled) {
                                 self.loginButtonDisabled = true
+                                if (invalidEmail(email) != nil)
+                                {
+                                    errorMessage = invalidEmail(email)
+                                }
+                                else if (invalidPassword(password) != nil)
+                                {
+                                    errorMessage = invalidPassword(password)
+                                }
                             }
-                            else if (invalidEmail(email) != nil)
+                            else
                             {
-                                errorMessage = invalidEmail(email)
-                            }
-                            else if (invalidPassword(password) != nil)
-                            {
-                                errorMessage = invalidPassword(password)
+                                self.loginButtonDisabled = false
+                                errorMessage = nil
                             }
                         })
                     
@@ -207,13 +211,6 @@ func invalidEmail(_ value: String) -> String? {
         let predicate = NSPredicate(format: "SELF MATCHES %@", reqularExpression)
         return !predicate.evaluate(with: value)
     }
-
-func checkValidity(email: String, password: String) -> Bool {
-    if (invalidEmail(email) == nil && invalidPassword(password) == nil) {
-        return true
-    }
-    return false
-}
 
 extension Color {
     init(hex: String) {
