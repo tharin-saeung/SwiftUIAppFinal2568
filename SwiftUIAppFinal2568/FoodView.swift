@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct FoodView: View {
-    @Environment(\.dismiss) var dismiss  // ✅
+    @Environment(\.dismiss) var dismiss
     @State private var showingAddFood = false
+    @State private var showingFoodRecognition = false
     @State private var selectedMealType = ""
 
+    // เพิ่ม State เพื่อเก็บข้อมูลอาหาร
     @State private var meals: [String: [FoodItem]] = [
         "Breakfast": [],
         "Lunch": [],
@@ -35,6 +37,18 @@ struct FoodView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                 Spacer()
+                
+                // Add camera button for food recognition
+                Button(action: {
+                    showingFoodRecognition = true
+                }) {
+                    Image(systemName: "camera.fill")
+                        .resizable()
+                        .frame(width: 24, height: 20)
+                        .foregroundColor(.white)
+                        .padding(.trailing, 8)
+                }
+                
                 Button(action: {
                     dismiss()
                 }) {
@@ -57,9 +71,17 @@ struct FoodView: View {
 
                         // Food items
                         ForEach(meals[meal] ?? []) { item in
-                            Text("• \(item.name) - \(item.calories) kcal")
-                                .font(.caption)
-                                .foregroundColor(.white)
+                            HStack {
+                                Text("• \(item.name)")
+                                    .font(.caption)
+                                    .foregroundColor(.white)
+                                
+                                Spacer()
+                                
+                                Text("\(item.calories) kcal")
+                                    .font(.caption)
+                                    .foregroundColor(.white.opacity(0.7))
+                            }
                         }
 
                         Spacer()
@@ -88,29 +110,72 @@ struct FoodView: View {
                 }
             }
 
-            // Other cards (Placeholder)
-            RoundedRectangle(cornerRadius: 12)
-                .fill(Color(hex: "#3E2A63"))
-                .frame(height: 60)
-                .overlay(Text("Meals table").foregroundColor(.white))
-
-            RoundedRectangle(cornerRadius: 12)
-                .fill(Color(hex: "#3E2A63"))
-                .frame(height: 80)
-                .overlay(Text("Meals preparation").foregroundColor(.white))
+            // Total calories
+            HStack {
+                Text("Total Calories:")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                
+                Spacer()
+                
+                Text("\(totalCalories) kcal")
+                    .font(.headline)
+                    .foregroundColor(.white)
+            }
+            .padding()
+            .background(Color(hex: "#3E2A63"))
+            .cornerRadius(12)
 
             Spacer()
         }
         .padding()
         .background(Color(hex: "#2F195F").edgesIgnoringSafeArea(.all))
-        .navigationBarBackButtonHidden(true) // ✅
+        .navigationBarBackButtonHidden(true)
         .sheet(isPresented: $showingAddFood) {
             AddFoodView(
                 mealType: selectedMealType,
                 onSave: { newItem in
-                    meals[selectedMealType, default: []].append(newItem)
+                    addFoodItem(newItem)
                 }
             )
+        }
+        // แก้ไขส่วนนี้เพื่อส่ง callback ไปยัง FoodRecognitionView
+        .sheet(isPresented: $showingFoodRecognition) {
+            FoodRecognitionView(onFoodAdded: { newItem in
+                addFoodItem(newItem)
+            })
+        }
+        // เพิ่มการรับ notification เมื่อต้องการเปิดกล้อง
+        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("OpenFoodRecognition"))) { notification in
+            if let mealType = notification.userInfo?["mealType"] as? String {
+                selectedMealType = mealType
+            }
+            // เปิดกล้องหลังจากปิด AddFoodView
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                showingFoodRecognition = true
+            }
+        }
+    }
+    
+    // คำนวณแคลอรี่ทั้งหมด
+    private var totalCalories: Int {
+        var total = 0
+        for (_, items) in meals {
+            total += items.reduce(0) { $0 + $1.calories }
+        }
+        return total
+    }
+    
+    // เพิ่มฟังก์ชันสำหรับเพิ่มอาหาร
+    private func addFoodItem(_ item: FoodItem) {
+        // ตรวจสอบว่ามี mealType หรือไม่
+        if !item.mealType.isEmpty {
+            // เพิ่มอาหารลงในมื้อที่ระบุ
+            meals[item.mealType, default: []].append(item)
+            
+            // แสดงการแจ้งเตือนว่าเพิ่มสำเร็จแล้ว
+            let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+            feedbackGenerator.impactOccurred()
         }
     }
 }
@@ -122,4 +187,5 @@ struct FoodView_Previews: PreviewProvider {
         }
     }
 }
+
 

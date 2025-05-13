@@ -21,6 +21,12 @@
 		30FCC3382DD33FB900745018 /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3372DD33FB900745018 /* TrackingView.swift */; };
 		30FCC33A2DD3489F00745018 /* DrawerLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3392DD3489F00745018 /* DrawerLayoutView.swift */; };
 		95454EB92DCE24BC00DD5D75 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95454EB82DCE24BC00DD5D75 /* LoginView.swift */; };
+		95C2843A2DD38040000D6901 /* FoodRecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C284392DD38040000D6901 /* FoodRecognitionView.swift */; };
+		95C2843C2DD3807D000D6901 /* FoodRecognitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C2843B2DD3807D000D6901 /* FoodRecognitionViewModel.swift */; };
+		95C2843E2DD380B6000D6901 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C2843D2DD380B6000D6901 /* CameraView.swift */; };
+		95C284402DD380F0000D6901 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C2843F2DD380F0000D6901 /* ImagePicker.swift */; };
+		95C284422DD38117000D6901 /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C284412DD38117000D6901 /* FoodService.swift */; };
+		95C284452DD39268000D6901 /* Food101.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 95C284442DD39268000D6901 /* Food101.mlmodel */; };
 		E10CE2122DD25983009B0821 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CE2112DD25983009B0821 /* AuthService.swift */; };
 		E10CE2142DD25A89009B0821 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E10CE2132DD25A89009B0821 /* GoogleService-Info.plist */; };
 		E10CE2172DD25BE0009B0821 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E10CE2162DD25BE0009B0821 /* FirebaseAuth */; };
@@ -86,6 +92,12 @@
 		30FCC3372DD33FB900745018 /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
 		30FCC3392DD3489F00745018 /* DrawerLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerLayoutView.swift; sourceTree = "<group>"; };
 		95454EB82DCE24BC00DD5D75 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		95C284392DD38040000D6901 /* FoodRecognitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecognitionView.swift; sourceTree = "<group>"; };
+		95C2843B2DD3807D000D6901 /* FoodRecognitionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecognitionViewModel.swift; sourceTree = "<group>"; };
+		95C2843D2DD380B6000D6901 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		95C2843F2DD380F0000D6901 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		95C284412DD38117000D6901 /* FoodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodService.swift; sourceTree = "<group>"; };
+		95C284442DD39268000D6901 /* Food101.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Food101.mlmodel; sourceTree = "<group>"; };
 		E10CE2112DD25983009B0821 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E10CE2132DD25A89009B0821 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E10CE2682DD25D6C009B0821 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -151,6 +163,7 @@
 		E10CE2102DD2596C009B0821 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				95C284442DD39268000D6901 /* Food101.mlmodel */,
 				E1A901122DD3591A00DF6E8A /* File */,
 				E10CE2672DD25D5E009B0821 /* Models */,
 				E10CE2112DD25983009B0821 /* AuthService.swift */,
@@ -197,6 +210,11 @@
 			children = (
 				E10CE2102DD2596C009B0821 /* Data */,
 				E161D9E72DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift */,
+				95C284392DD38040000D6901 /* FoodRecognitionView.swift */,
+				95C2843B2DD3807D000D6901 /* FoodRecognitionViewModel.swift */,
+				95C2843D2DD380B6000D6901 /* CameraView.swift */,
+				95C2843F2DD380F0000D6901 /* ImagePicker.swift */,
+				95C284412DD38117000D6901 /* FoodService.swift */,
 				3028DACA2DD2511E00E56379 /* MainTabView.swift */,
 				30FCC3392DD3489F00745018 /* DrawerLayoutView.swift */,
 				3028DAD22DD2552800E56379 /* ShopView.swift */,
@@ -404,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C284452DD39268000D6901 /* Food101.mlmodel in Sources */,
 				3028DAD12DD254DE00E56379 /* FoodView.swift in Sources */,
 				E161D9EA2DC22C1D00F0D451 /* ContentView.swift in Sources */,
 				3028DAC72DD2220B00E56379 /* GoalSelectionView.swift in Sources */,
@@ -419,14 +438,19 @@
 				E10CE26D2DD25D6C009B0821 /* Food.swift in Sources */,
 				E1A900F22DD2A81800DF6E8A /* NavigationBarConfig.swift in Sources */,
 				E1A900EE2DD2914700DF6E8A /* UserAuth.swift in Sources */,
+				95C2843E2DD380B6000D6901 /* CameraView.swift in Sources */,
 				E10CE26E2DD25D6C009B0821 /* LoginUserRequest.swift in Sources */,
+				95C284402DD380F0000D6901 /* ImagePicker.swift in Sources */,
 				E10CE26F2DD25D6C009B0821 /* RegisterUserRequest.swift in Sources */,
+				95C284422DD38117000D6901 /* FoodService.swift in Sources */,
 				3028DAC52DD221A100E56379 /* RegisterView.swift in Sources */,
+				95C2843A2DD38040000D6901 /* FoodRecognitionView.swift in Sources */,
 				E1A9011A2DD3591A00DF6E8A /* AlertManager.swift in Sources */,
 				E1A9011B2DD3591A00DF6E8A /* plistLoader.swift in Sources */,
 				3028DAD32DD2552800E56379 /* ShopView.swift in Sources */,
 				30FCC3362DD33CD000745018 /* DiaryView.swift in Sources */,
 				30FCC3322DD3294300745018 /* AddFoodView.swift in Sources */,
+				95C2843C2DD3807D000D6901 /* FoodRecognitionViewModel.swift in Sources */,
 				E161D9E82DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift in Sources */,
 				30FCC3302DD3225000745018 /* ProductDetailView.swift in Sources */,
 			);
@@ -562,8 +586,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIAppFinal2568/Preview Content\"";
+				DEVELOPMENT_TEAM = KR2GJB29TL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIAppFinal2568/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ขอใช้กล้องหน่อยครับ";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "ขอเพิ่มรูปไปที่Libraryหน่อยครับ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "ขอเข้าถึงLibraryหน่อยครับ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -591,8 +620,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIAppFinal2568/Preview Content\"";
+				DEVELOPMENT_TEAM = KR2GJB29TL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIAppFinal2568/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ขอใช้กล้องหน่อยครับ";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "ขอเพิ่มรูปไปที่Libraryหน่อยครับ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "ขอเข้าถึงLibraryหน่อยครับ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
