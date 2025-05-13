@@ -20,6 +20,8 @@
 		30FCC3362DD33CD000745018 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3352DD33CD000745018 /* DiaryView.swift */; };
 		30FCC3382DD33FB900745018 /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3372DD33FB900745018 /* TrackingView.swift */; };
 		30FCC33A2DD3489F00745018 /* DrawerLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3392DD3489F00745018 /* DrawerLayoutView.swift */; };
+		30FCC33C2DD3A8AE00745018 /* WorkoutStyleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC33B2DD3A8AE00745018 /* WorkoutStyleSelectionView.swift */; };
+		30FCC33E2DD3BE3E00745018 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC33D2DD3BE3E00745018 /* WorkoutDetailView.swift */; };
 		95454EB92DCE24BC00DD5D75 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95454EB82DCE24BC00DD5D75 /* LoginView.swift */; };
 		95C2843A2DD38040000D6901 /* FoodRecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C284392DD38040000D6901 /* FoodRecognitionView.swift */; };
 		95C2843C2DD3807D000D6901 /* FoodRecognitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C2843B2DD3807D000D6901 /* FoodRecognitionViewModel.swift */; };
@@ -92,6 +94,8 @@
 		30FCC3352DD33CD000745018 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		30FCC3372DD33FB900745018 /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
 		30FCC3392DD3489F00745018 /* DrawerLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerLayoutView.swift; sourceTree = "<group>"; };
+		30FCC33B2DD3A8AE00745018 /* WorkoutStyleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStyleSelectionView.swift; sourceTree = "<group>"; };
+		30FCC33D2DD3BE3E00745018 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
 		95454EB82DCE24BC00DD5D75 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		95C284392DD38040000D6901 /* FoodRecognitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecognitionView.swift; sourceTree = "<group>"; };
 		95C2843B2DD3807D000D6901 /* FoodRecognitionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecognitionViewModel.swift; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 				3028DAD22DD2552800E56379 /* ShopView.swift */,
 				30FCC32F2DD3225000745018 /* ProductDetailView.swift */,
 				3028DACE2DD254D100E56379 /* WorkoutView.swift */,
+				30FCC33B2DD3A8AE00745018 /* WorkoutStyleSelectionView.swift */,
+				30FCC33D2DD3BE3E00745018 /* WorkoutDetailView.swift */,
 				3028DAD02DD254DE00E56379 /* FoodView.swift */,
 				30FCC3332DD32CE200745018 /* FoodItem.swift */,
 				30FCC3312DD3294300745018 /* AddFoodView.swift */,
@@ -432,12 +438,14 @@
 				30FCC3382DD33FB900745018 /* TrackingView.swift in Sources */,
 				3028DACF2DD254D100E56379 /* WorkoutView.swift in Sources */,
 				30FCC3342DD32CE200745018 /* FoodItem.swift in Sources */,
+				30FCC33C2DD3A8AE00745018 /* WorkoutStyleSelectionView.swift in Sources */,
 				95454EB92DCE24BC00DD5D75 /* LoginView.swift in Sources */,
 				3028DACD2DD252B600E56379 /* DashboardView.swift in Sources */,
 				E1A9013D2DD3BAC400DF6E8A /* MainView.swift in Sources */,
 				3028DACB2DD2511E00E56379 /* MainTabView.swift in Sources */,
 				30FCC33A2DD3489F00745018 /* DrawerLayoutView.swift in Sources */,
 				E10CE2122DD25983009B0821 /* AuthService.swift in Sources */,
+				30FCC33E2DD3BE3E00745018 /* WorkoutDetailView.swift in Sources */,
 				E10CE26C2DD25D6C009B0821 /* User.swift in Sources */,
 				E10CE26D2DD25D6C009B0821 /* Food.swift in Sources */,
 				E1A900F22DD2A81800DF6E8A /* NavigationBarConfig.swift in Sources */,
