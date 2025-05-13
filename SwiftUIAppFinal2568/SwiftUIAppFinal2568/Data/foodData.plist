@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Tom Yum Soup</key>
+	<integer>150</integer>
+	<key>Som Tum</key>
+	<integer>150</integer>
+	<key>Gai Pad Med Mamuang</key>
+	<integer>400</integer>
+	<key>Larb Gai</key>
+	<integer>150</integer>
+	<key>Pad See Ew</key>
+	<integer>500</integer>
+	<key>Tom Kha Gai</key>
+	<integer>400</integer>
+	<key>Yum Woon Sen</key>
+	<integer>150</integer>
+	<key>Gaeng Jued</key>
+	<integer>75</integer>
+	<key>Pla Nueng Manao</key>
+	<integer>250</integer>
+	<key>Pad Pak Boong</key>
+	<integer>200</integer>
+	<key>Pad Kra pao</key>
+	<integer>350</integer>
+	<key>Miang Kham</key>
+	<integer>70</integer>
+	<key>Gaeng Keow Wan Gai</key>
+	<integer>400</integer>
+	<key>Pad Pak Ruam</key>
+	<integer>200</integer>
+	<key>Pla Rad Prik</key>
+	<integer>350</integer>
+	<key>Poh Pia Tod</key>
+	<integer>100</integer>
+	<key>Pad Prik Khing</key>
+	<integer>300</integer>
+	<key>Kai Jeow</key>
+	<integer>150</integer>
+	<key>Yum Neua</key>
+	<integer>200</integer>
+	<key>Gaeng Om</key>
+	<integer>350</integer>
+	<key>Pla Pao</key>
+	<integer>150</integer>
+	<key>Kuay Teow Nam Tok</key>
+	<integer>200</integer>
+	<key>Moo Nam Tok</key>
+	<integer>300</integer>
+	<key>Tod Mun Pla</key>
+	<integer>300</integer>
+	<key>Yam Pla Dook Foo</key>
+	<integer>350</integer>
+	<key>Pla Sam Rod</key>
+	<integer>300</integer>
+	<key>Pad Phed</key>
+	<integer>150</integer>
+	<key>Kao Pad</key>
+	<integer>270</integer>
+	<key>Pla Muk Pad Ped</key>
+	<integer>400</integer>
+	<key>Moo Pad Prik Gaeng</key>
+	<integer>300</integer>
+</dict>
+</plist>

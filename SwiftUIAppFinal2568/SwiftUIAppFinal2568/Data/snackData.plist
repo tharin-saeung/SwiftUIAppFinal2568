@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Yogurt</key>
+	<integer>120</integer>
+	<key>Apple</key>
+	<integer>150</integer>
+	<key>Carrot</key>
+	<integer>130</integer>
+	<key>Mixed Nuts</key>
+	<integer>170</integer>
+	<key>Rice Cakes</key>
+	<integer>200</integer>
+	<key>Boiled Eggs</key>
+	<integer>75</integer>
+	<key>Popcorn</key>
+	<integer>50</integer>
+	<key>Cottage Cheese</key>
+	<integer>150</integer>
+	<key>Whole Grian Crackers</key>
+	<integer>100</integer>
+	<key>Edamame</key>
+	<integer>120</integer>
+	<key>Frozen Grapes</key>
+	<integer>70</integer>
+	<key>Cherry Tomatoes</key>
+	<integer>120</integer>
+	<key>Dark Chocolate</key>
+	<integer>170</integer>
+	<key>Turkey</key>
+	<integer>60</integer>
+	<key>Homemade Trail Mix</key>
+	<integer>170</integer>
+	<key>Roasted Chickpeas</key>
+	<integer>130</integer>
+	<key>Seaweed Snacks</key>
+	<integer>50</integer>
+	<key>Veggies</key>
+	<integer>120</integer>
+</dict>
+</plist>

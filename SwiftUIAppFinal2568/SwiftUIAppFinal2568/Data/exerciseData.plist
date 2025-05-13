@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Bodyweight</key>
+	<dict>
+		<key>Abs</key>
+		<array>
+			<string>High Knee Taps</string>
+			<string>Russian Twist</string>
+			<string>Leg Raise</string>
+			<string>Hip Raise</string>
+			<string>Flutter kicks</string>
+			<string>Planks Knees To Elbow</string>
+			<string>Chair Sit up</string>
+			<string>Seated In &amp; Out</string>
+			<string>Jumping Jack</string>
+		</array>
+		<key>Upper body</key>
+		<array>
+			<string>Jumping Jack</string>
+			<string>Upright Plank</string>
+			<string>Elbow Plank</string>
+			<string>Staggard Pushup</string>
+			<string>Pushup</string>
+			<string>Pike Push</string>
+			<string>Shuffle Pushup</string>
+			<string>Close Pushup</string>
+			<string>ISO Pushup</string>
+			<string>Wide Pushup</string>
+			<string>Side Plank</string>
+			<string>Dive Bomber</string>
+		</array>
+		<key>Lower body</key>
+		<array>
+			<string>Front Squat</string>
+			<string>Split Squat</string>
+			<string>Deadlift + Calf Raise</string>
+			<string>Side Lunge</string>
+			<string>Glute Bridge + Sit-up</string>
+			<string>Knee Tucks</string>
+			<string>Sumo Drop Squat</string>
+			<string>Reverse Lunge</string>
+		</array>
+		<key>Chest</key>
+		<array>
+			<string>Jumping Jack</string>
+			<string>Upright Plank</string>
+			<string>Elbow Plank</string>
+			<string>Staggard Pushup</string>
+			<string>Pushup</string>
+			<string>Pike Push</string>
+			<string>Shuffly Pushup</string>
+		</array>
+		<key>Back</key>
+		<array>
+			<string>Superman</string>
+			<string>Superflies</string>
+			<string>Reverse Snow Angels</string>
+			<string>Superman Pull</string>
+			<string>Goodmornings</string>
+		</array>
+		<key>Legs</key>
+		<array>
+			<string>Squat</string>
+			<string>Calf Raise</string>
+			<string>Inch Worms</string>
+			<string>Fire Hydrants</string>
+			<string>Glute Bridge</string>
+			<string>Donkey Kick</string>
+			<string>Side Lunge</string>
+			<string>Sumo Squats</string>
+		</array>
+	</dict>
+	<key>Weight training</key>
+	<dict>
+		<key>Upper body</key>
+		<array>
+			<string>Incline Dumbbell Press</string>
+			<string>Barbell Row</string>
+			<string>Overhead Press</string>
+			<string>Pull-ups</string>
+			<string>Lat Pull Down</string>
+			<string>Incline Dumbbell Curls</string>
+			<string>Overhead Triceps Extension</string>
+		</array>
+		<key>Lower body</key>
+		<array>
+			<string>Barbell Squat</string>
+			<string>Deadlift</string>
+			<string>Split Squad</string>
+			<string>Glute Ham Raise</string>
+			<string>Standing Single Leg Calf Raise</string>
+			<string>Seated Calf Raise</string>
+		</array>
+		<key>Chest</key>
+		<array>
+			<string>PEC DEC Fly</string>
+			<string>Flat Bench Press</string>
+			<string>Incline Dumbbell Press</string>
+			<string>Chest Dip</string>
+			<string>Incline Dumbbell Fly</string>
+		</array>
+		<key>Back</key>
+		<array>
+			<string>Lat Pull Down</string>
+			<string>Pull up</string>
+			<string>Kroc Row</string>
+			<string>Cable Shrug</string>
+			<string>Reverse Pec Dec Fly</string>
+			<string>Overhead Cable Bicep Curl</string>
+		</array>
+		<key>Legs</key>
+		<array>
+			<string>Squat</string>
+			<string>Hip Thrust</string>
+			<string>Split Squat</string>
+			<string>Glute Ham Raise</string>
+			<string>Standing Single Leg Calf Raise</string>
+			<string>Seated Calf Raise</string>
+		</array>
+		<key>Abs</key>
+		<array>
+			<string>High Knee Taps</string>
+			<string>Russian Twist</string>
+			<string>Leg Raise</string>
+			<string>Hip Raise</string>
+			<string>Flutter kicks</string>
+			<string>Planks Knees To Elbow</string>
+			<string>Chair Sit up</string>
+			<string>Seated In &amp; Out</string>
+			<string>Jumping Jack</string>
+		</array>
+	</dict>
+</dict>
+</plist>
