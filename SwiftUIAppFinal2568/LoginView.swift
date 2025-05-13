@@ -13,8 +13,8 @@ struct LoginView: View {
     func handleLogin() {
         let request = LoginUserRequest(email: email, password: password)
         AuthService.shared.signIn(with: request) { error in
-            if let error = error {
-                self.errorMessage = error.localizedDescription
+            if error != nil {
+                self.errorMessage = "Wrong username or password. Please try again."
                 return
             }
             
