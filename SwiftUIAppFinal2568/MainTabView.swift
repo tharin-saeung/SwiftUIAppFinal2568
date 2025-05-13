@@ -93,13 +93,13 @@ struct DashboardView2: View {
                     // Section Cards
                     VStack(spacing: 12) {
                         NavigationLink(destination: WorkoutView()) {
-                            DashboardCard(imageName: "workout", title: "Workout")
+                            DashboardCard(imageName: "Workout", title: "Workout")
                         }
                         NavigationLink(destination: FoodView()) {
-                            DashboardCard(imageName: "food", title: "Food")
+                            DashboardCard(imageName: "Food", title: "Food")
                         }
                         NavigationLink(destination: ShopView()) {
-                            DashboardCard(imageName: "shop", title: "Shop")
+                            DashboardCard(imageName: "Shop", title: "Shop")
                         }
                     }
 

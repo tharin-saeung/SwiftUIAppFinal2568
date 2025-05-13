@@ -14,6 +14,12 @@
 		3028DACF2DD254D100E56379 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028DACE2DD254D100E56379 /* WorkoutView.swift */; };
 		3028DAD12DD254DE00E56379 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028DAD02DD254DE00E56379 /* FoodView.swift */; };
 		3028DAD32DD2552800E56379 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028DAD22DD2552800E56379 /* ShopView.swift */; };
+		306468D32DD3F23B001A68F6 /* whey.png in Resources */ = {isa = PBXBuildFile; fileRef = 306468D22DD3F23B001A68F6 /* whey.png */; };
+		306468D52DD3F4FC001A68F6 /* vitamin.png in Resources */ = {isa = PBXBuildFile; fileRef = 306468D42DD3F4FC001A68F6 /* vitamin.png */; };
+		306468DA2DD3F607001A68F6 /* preworkout.png in Resources */ = {isa = PBXBuildFile; fileRef = 306468D82DD3F607001A68F6 /* preworkout.png */; };
+		306468DB2DD3F607001A68F6 /* watch.png in Resources */ = {isa = PBXBuildFile; fileRef = 306468D92DD3F607001A68F6 /* watch.png */; };
+		306468DC2DD3F607001A68F6 /* amino.png in Resources */ = {isa = PBXBuildFile; fileRef = 306468D62DD3F607001A68F6 /* amino.png */; };
+		306468DD2DD3F607001A68F6 /* equipment.png in Resources */ = {isa = PBXBuildFile; fileRef = 306468D72DD3F607001A68F6 /* equipment.png */; };
 		30FCC3302DD3225000745018 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC32F2DD3225000745018 /* ProductDetailView.swift */; };
 		30FCC3322DD3294300745018 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3312DD3294300745018 /* AddFoodView.swift */; };
 		30FCC3342DD32CE200745018 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3332DD32CE200745018 /* FoodItem.swift */; };
@@ -88,6 +94,12 @@
 		3028DACE2DD254D100E56379 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		3028DAD02DD254DE00E56379 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		3028DAD22DD2552800E56379 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		306468D22DD3F23B001A68F6 /* whey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whey.png; sourceTree = "<group>"; };
+		306468D42DD3F4FC001A68F6 /* vitamin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vitamin.png; sourceTree = "<group>"; };
+		306468D62DD3F607001A68F6 /* amino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amino.png; sourceTree = "<group>"; };
+		306468D72DD3F607001A68F6 /* equipment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = equipment.png; sourceTree = "<group>"; };
+		306468D82DD3F607001A68F6 /* preworkout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preworkout.png; sourceTree = "<group>"; };
+		306468D92DD3F607001A68F6 /* watch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watch.png; sourceTree = "<group>"; };
 		30FCC32F2DD3225000745018 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		30FCC3312DD3294300745018 /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
 		30FCC3332DD32CE200745018 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
@@ -258,9 +270,15 @@
 		E1A900F72DD3591A00DF6E8A /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				306468D42DD3F4FC001A68F6 /* vitamin.png */,
 				E1A900F42DD3591A00DF6E8A /* Fitwhey.png */,
 				E1A900F52DD3591A00DF6E8A /* Lazada.png */,
 				E1A900F62DD3591A00DF6E8A /* Shopee.png */,
+				306468D22DD3F23B001A68F6 /* whey.png */,
+				306468D62DD3F607001A68F6 /* amino.png */,
+				306468D72DD3F607001A68F6 /* equipment.png */,
+				306468D82DD3F607001A68F6 /* preworkout.png */,
+				306468D92DD3F607001A68F6 /* watch.png */,
 			);
 			name = Shop;
 			sourceTree = "<group>";
@@ -394,6 +412,10 @@
 				E1A9011E2DD3591A00DF6E8A /* Weight training_Lower body.mp4 in Resources */,
 				E1A9011F2DD3591A00DF6E8A /* Legs.png in Resources */,
 				E1A901202DD3591A00DF6E8A /* Bodyweight_Legs.mp4 in Resources */,
+				306468DA2DD3F607001A68F6 /* preworkout.png in Resources */,
+				306468DB2DD3F607001A68F6 /* watch.png in Resources */,
+				306468DC2DD3F607001A68F6 /* amino.png in Resources */,
+				306468DD2DD3F607001A68F6 /* equipment.png in Resources */,
 				E1A901212DD3591A00DF6E8A /* Workout.png in Resources */,
 				E1A901222DD3591A00DF6E8A /* FlexGenius.png in Resources */,
 				E1A901232DD3591A00DF6E8A /* Lazada.png in Resources */,
@@ -403,6 +425,7 @@
 				E1A901272DD3591A00DF6E8A /* Food.png in Resources */,
 				E1A901282DD3591A00DF6E8A /* Chest.png in Resources */,
 				E1A901292DD3591A00DF6E8A /* Bodyweight_Back.mp4 in Resources */,
+				306468D32DD3F23B001A68F6 /* whey.png in Resources */,
 				E1A9012A2DD3591A00DF6E8A /* Weight training_Abs.mp4 in Resources */,
 				E1A9012B2DD3591A00DF6E8A /* Upper body.png in Resources */,
 				E1A9012C2DD3591A00DF6E8A /* Bodyweight_Chest.mp4 in Resources */,
@@ -420,6 +443,7 @@
 				E1A901382DD3591A00DF6E8A /* Shop.png in Resources */,
 				E1A901392DD3591A00DF6E8A /* Bodyweight_Upper body.mp4 in Resources */,
 				E1A9013A2DD3591A00DF6E8A /* Weight training.png in Resources */,
+				306468D52DD3F4FC001A68F6 /* vitamin.png in Resources */,
 				E1A9013B2DD3591A00DF6E8A /* Bodyweight_Abs.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,34 +12,60 @@ struct ProductDetailView: View {
     let imageName: String
 
     var body: some View {
-        VStack(spacing: 16) {
-            Image(imageName)
-                .resizable()
-//                .scaledToFit()
-                .frame(height: 200)
-                .padding()
+        ScrollView {
+            VStack(spacing: 24) {
+                // รูปภาพสินค้า
+                Image(imageName)
+                    .resizable()
+                    
+                    .frame(height: 240)
+                    .cornerRadius(20)
+                    .shadow(color: .black.opacity(0.3), radius: 10, x: 0, y: 6)
+                    .padding(.top, 32)
 
-            Text(productName)
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
+                // ชื่อสินค้า
+                Text(productName)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
 
-            Text("รายละเอียดสินค้า \(productName) จะมาใส่ทีหลัง...")
-                .foregroundColor(.white)
-                .multilineTextAlignment(.center)
-                .padding()
+                // รายละเอียดสินค้า
+                Text("รายละเอียดสินค้า \(productName) จะมาใส่ทีหลัง...")
+                    .foregroundColor(.white.opacity(0.85))
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
 
-            Spacer()
+                Spacer(minLength: 40)
+            }
+            .padding(.horizontal)
         }
-        .padding()
-        .background(Color(hex: "#2F195F").edgesIgnoringSafeArea(.all))
+        .background(
+            LinearGradient(colors: [Color(hex: "#2F195F"), Color(hex: "#1E1336")],
+                           startPoint: .top,
+                           endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
+        )
+        // 🛒 ปุ่ม Add to Cart
+                        Button(action: {
+                            print("✅ Added \(productName) to cart")
+                        }) {
+                            Text("Add to Cart")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color(hex: "#b89ce6"))
+                                .cornerRadius(12)
+                                .shadow(radius: 5)
+                        }
+                        .padding(.horizontal)
+                        .padding(.bottom, 20)
+                    
         .navigationTitle("Product")
         .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-#Preview
-{
-    ProductDetailView(productName: "Test", imageName: "Test.png")
-    
+#Preview {
+    ProductDetailView(productName: "Whey Protein", imageName: "whey")
 }
