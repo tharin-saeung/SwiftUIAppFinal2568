@@ -14,6 +14,12 @@
 		3028DACF2DD254D100E56379 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028DACE2DD254D100E56379 /* WorkoutView.swift */; };
 		3028DAD12DD254DE00E56379 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028DAD02DD254DE00E56379 /* FoodView.swift */; };
 		3028DAD32DD2552800E56379 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3028DAD22DD2552800E56379 /* ShopView.swift */; };
+		30FCC3302DD3225000745018 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC32F2DD3225000745018 /* ProductDetailView.swift */; };
+		30FCC3322DD3294300745018 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3312DD3294300745018 /* AddFoodView.swift */; };
+		30FCC3342DD32CE200745018 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3332DD32CE200745018 /* FoodItem.swift */; };
+		30FCC3362DD33CD000745018 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3352DD33CD000745018 /* DiaryView.swift */; };
+		30FCC3382DD33FB900745018 /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3372DD33FB900745018 /* TrackingView.swift */; };
+		30FCC33A2DD3489F00745018 /* DrawerLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3392DD3489F00745018 /* DrawerLayoutView.swift */; };
 		95454EB92DCE24BC00DD5D75 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95454EB82DCE24BC00DD5D75 /* LoginView.swift */; };
 		E10CE2122DD25983009B0821 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CE2112DD25983009B0821 /* AuthService.swift */; };
 		E10CE2142DD25A89009B0821 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E10CE2132DD25A89009B0821 /* GoogleService-Info.plist */; };
@@ -40,6 +46,12 @@
 		3028DACE2DD254D100E56379 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		3028DAD02DD254DE00E56379 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		3028DAD22DD2552800E56379 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		30FCC32F2DD3225000745018 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		30FCC3312DD3294300745018 /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
+		30FCC3332DD32CE200745018 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
+		30FCC3352DD33CD000745018 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
+		30FCC3372DD33FB900745018 /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
+		30FCC3392DD3489F00745018 /* DrawerLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerLayoutView.swift; sourceTree = "<group>"; };
 		95454EB82DCE24BC00DD5D75 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E10CE2112DD25983009B0821 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E10CE2132DD25A89009B0821 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -113,10 +125,16 @@
 				E10CE2102DD2596C009B0821 /* Data */,
 				E161D9E72DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift */,
 				3028DACA2DD2511E00E56379 /* MainTabView.swift */,
+				30FCC3392DD3489F00745018 /* DrawerLayoutView.swift */,
 				3028DAD22DD2552800E56379 /* ShopView.swift */,
+				30FCC32F2DD3225000745018 /* ProductDetailView.swift */,
 				3028DACE2DD254D100E56379 /* WorkoutView.swift */,
 				3028DAD02DD254DE00E56379 /* FoodView.swift */,
+				30FCC3332DD32CE200745018 /* FoodItem.swift */,
+				30FCC3312DD3294300745018 /* AddFoodView.swift */,
 				3028DACC2DD252B600E56379 /* DashboardView.swift */,
+				30FCC3352DD33CD000745018 /* DiaryView.swift */,
+				30FCC3372DD33FB900745018 /* TrackingView.swift */,
 				95454EB82DCE24BC00DD5D75 /* LoginView.swift */,
 				3028DAC42DD221A100E56379 /* RegisterView.swift */,
 				3028DAC62DD2220B00E56379 /* GoalSelectionView.swift */,
@@ -219,10 +237,13 @@
 				3028DAD12DD254DE00E56379 /* FoodView.swift in Sources */,
 				E161D9EA2DC22C1D00F0D451 /* ContentView.swift in Sources */,
 				3028DAC72DD2220B00E56379 /* GoalSelectionView.swift in Sources */,
+				30FCC3382DD33FB900745018 /* TrackingView.swift in Sources */,
 				3028DACF2DD254D100E56379 /* WorkoutView.swift in Sources */,
+				30FCC3342DD32CE200745018 /* FoodItem.swift in Sources */,
 				95454EB92DCE24BC00DD5D75 /* LoginView.swift in Sources */,
 				3028DACD2DD252B600E56379 /* DashboardView.swift in Sources */,
 				3028DACB2DD2511E00E56379 /* MainTabView.swift in Sources */,
+				30FCC33A2DD3489F00745018 /* DrawerLayoutView.swift in Sources */,
 				E10CE2122DD25983009B0821 /* AuthService.swift in Sources */,
 				E10CE26C2DD25D6C009B0821 /* User.swift in Sources */,
 				E10CE26D2DD25D6C009B0821 /* Food.swift in Sources */,
@@ -232,7 +253,10 @@
 				E10CE26F2DD25D6C009B0821 /* RegisterUserRequest.swift in Sources */,
 				3028DAC52DD221A100E56379 /* RegisterView.swift in Sources */,
 				3028DAD32DD2552800E56379 /* ShopView.swift in Sources */,
+				30FCC3362DD33CD000745018 /* DiaryView.swift in Sources */,
+				30FCC3322DD3294300745018 /* AddFoodView.swift in Sources */,
 				E161D9E82DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift in Sources */,
+				30FCC3302DD3225000745018 /* ProductDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

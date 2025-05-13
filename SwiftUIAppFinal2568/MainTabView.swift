@@ -20,17 +20,21 @@ struct MainTabView: View {
                     Text("Dashboard")
                 }
 
-            Text("Diary Page")
-                .tabItem {
-                    Image(systemName: "book")
-                    Text("Diary")
-                }
+            NavigationStack {
+                DiaryView()
+            }
+            .tabItem {
+                Image(systemName: "book")
+                Text("Diary")
+            }
 
-            Text("Tracking Page")
-                .tabItem {
-                    Image(systemName: "figure.walk")
-                    Text("Tracking")
-                }
+            NavigationStack {
+                TrackingView()
+            }
+            .tabItem {
+                Image(systemName: "figure.walk")
+                Text("Tracking")
+            }
         }
         .accentColor(.white)
     }
@@ -45,7 +49,7 @@ struct DashboardView2: View {
 
                     // Header: Greeting + Avatar
                     HStack(spacing: 12) {
-                        Image(systemName: "person.circle.fill")
+                        Image(systemName: "")
                             .resizable()
                             .frame(width: 40, height: 40)
                             .foregroundColor(.white)
