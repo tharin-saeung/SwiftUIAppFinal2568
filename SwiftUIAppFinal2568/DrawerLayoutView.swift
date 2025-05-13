@@ -13,6 +13,7 @@ struct DrawerLayoutView: View {
     @State private var isGoalPickerExpanded = false
 
     let allGoals = ["Fat Loss", "Weight Gain", "Muscle Building"]
+    @State public var disableSettings = false
 
     var body: some View {
         ZStack {
@@ -100,6 +101,8 @@ struct DrawerLayoutView: View {
                             .resizable()
                             .frame(width: 40, height: 40)
                             .foregroundColor(.white)
+                            .disabled(disableSettings)
+                            .opacity(disableSettings ? 0 : 1)
                     }
                     .padding()
 

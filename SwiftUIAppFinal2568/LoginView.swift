@@ -32,10 +32,7 @@ struct LoginView: View {
         NavigationView {
             VStack(spacing: 20) {
                 Spacer()
-                Text("FLEX GENIUS")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
+                Image("FlexGenius")
                 
                 VStack(spacing: 16) {
                     TextField("Email", text: $email, prompt: Text("Email").foregroundColor(.gray))

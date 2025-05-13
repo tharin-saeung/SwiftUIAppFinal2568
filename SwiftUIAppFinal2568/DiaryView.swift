@@ -128,12 +128,12 @@ struct DiaryView: View {
                                 .foregroundColor(.white)
                         }
                     }
-                    .frame(maxWidth: .infinity, minHeight: 100)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: .infinity, minHeight: 160)
                     .background(Color(hex: "#3E2A63"))
                     .cornerRadius(12)
                 }
             }
-
             Spacer()
         }
         .padding()

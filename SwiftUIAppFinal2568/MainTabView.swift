@@ -29,7 +29,7 @@ struct MainTabView: View {
             }
 
             NavigationStack {
-                TrackingView()
+                TrackingView().environmentObject(ExerciseState())
             }
             .tabItem {
                 Image(systemName: "figure.walk")
