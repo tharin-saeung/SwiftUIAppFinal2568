@@ -15,15 +15,14 @@ struct Goal: Identifiable, Hashable {
 
 struct GoalSelectionView: View {
     @State private var selectedGoals: Set<Goal> = []
-
+    
     let goals: [Goal] = [
         Goal(title: "Fat Loss", imageName: "fatloss"),
         Goal(title: "Weight Gain", imageName: "weightgain"),
         Goal(title: "Just exercise For Health", imageName: "health")
     ]
-
+    
     var body: some View {
-        NavigationStack {
             ScrollView {
                 VStack(spacing: 20) {
                     Text("Choose Your Goals")
@@ -31,7 +30,7 @@ struct GoalSelectionView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .padding(.top)
-
+                    
                     ForEach(goals) { goal in
                         HStack {
                             ZStack {
@@ -41,17 +40,17 @@ struct GoalSelectionView: View {
                                     .frame(height: 120)
                                     .clipped()
                                     .cornerRadius(12)
-
+                                
                                 Rectangle()
                                     .foregroundColor(.black.opacity(0.3))
                                     .cornerRadius(12)
-
+                                
                                 Text(goal.title)
                                     .foregroundColor(.white)
                                     .font(.headline)
                             }
                             .frame(maxWidth: .infinity)
-
+                            
                             Button(action: {
                                 if selectedGoals.contains(goal) {
                                     selectedGoals.remove(goal)
@@ -68,7 +67,7 @@ struct GoalSelectionView: View {
                         .frame(height: 120)
                         .padding(.horizontal)
                     }
-
+                    
                     Button("Continue") {
                         print(selectedGoals.map { $0.title })
                     }
@@ -85,13 +84,11 @@ struct GoalSelectionView: View {
             }
             .background(Color(hex: "#2F195F").edgesIgnoringSafeArea(.all))
         }
-    }
 }
 
 struct GoalSelectionView_Previews: PreviewProvider {
     static var previews: some View {
         GoalSelectionView()
-            .previewDevice("iPhone 15")
     }
 }
-    
+

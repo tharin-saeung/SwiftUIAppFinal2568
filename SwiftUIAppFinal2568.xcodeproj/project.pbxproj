@@ -20,7 +20,15 @@
 		30FCC3362DD33CD000745018 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3352DD33CD000745018 /* DiaryView.swift */; };
 		30FCC3382DD33FB900745018 /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3372DD33FB900745018 /* TrackingView.swift */; };
 		30FCC33A2DD3489F00745018 /* DrawerLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3392DD3489F00745018 /* DrawerLayoutView.swift */; };
+		30FCC33C2DD3A8AE00745018 /* WorkoutStyleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC33B2DD3A8AE00745018 /* WorkoutStyleSelectionView.swift */; };
+		30FCC33E2DD3BE3E00745018 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC33D2DD3BE3E00745018 /* WorkoutDetailView.swift */; };
 		95454EB92DCE24BC00DD5D75 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95454EB82DCE24BC00DD5D75 /* LoginView.swift */; };
+		95C2843A2DD38040000D6901 /* FoodRecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C284392DD38040000D6901 /* FoodRecognitionView.swift */; };
+		95C2843C2DD3807D000D6901 /* FoodRecognitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C2843B2DD3807D000D6901 /* FoodRecognitionViewModel.swift */; };
+		95C2843E2DD380B6000D6901 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C2843D2DD380B6000D6901 /* CameraView.swift */; };
+		95C284402DD380F0000D6901 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C2843F2DD380F0000D6901 /* ImagePicker.swift */; };
+		95C284422DD38117000D6901 /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C284412DD38117000D6901 /* FoodService.swift */; };
+		95C284452DD39268000D6901 /* Food101.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 95C284442DD39268000D6901 /* Food101.mlmodel */; };
 		E10CE2122DD25983009B0821 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CE2112DD25983009B0821 /* AuthService.swift */; };
 		E10CE2142DD25A89009B0821 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E10CE2132DD25A89009B0821 /* GoogleService-Info.plist */; };
 		E10CE2172DD25BE0009B0821 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E10CE2162DD25BE0009B0821 /* FirebaseAuth */; };
@@ -36,6 +44,40 @@
 		E161D9EF2DC22C1E00F0D451 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E161D9EE2DC22C1E00F0D451 /* Preview Assets.xcassets */; };
 		E1A900EE2DD2914700DF6E8A /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A900ED2DD2914700DF6E8A /* UserAuth.swift */; };
 		E1A900F22DD2A81800DF6E8A /* NavigationBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A900F12DD2A81800DF6E8A /* NavigationBarConfig.swift */; };
+		E1A9011A2DD3591A00DF6E8A /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A901132DD3591A00DF6E8A /* AlertManager.swift */; };
+		E1A9011B2DD3591A00DF6E8A /* plistLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A901192DD3591A00DF6E8A /* plistLoader.swift */; };
+		E1A9011D2DD3591A00DF6E8A /* Weight training_Chest.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E1A9010D2DD3591A00DF6E8A /* Weight training_Chest.mp4 */; };
+		E1A9011E2DD3591A00DF6E8A /* Weight training_Lower body.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E1A9010F2DD3591A00DF6E8A /* Weight training_Lower body.mp4 */; };
+		E1A9011F2DD3591A00DF6E8A /* Legs.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A900FB2DD3591A00DF6E8A /* Legs.png */; };
+		E1A901202DD3591A00DF6E8A /* Bodyweight_Legs.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E1A901082DD3591A00DF6E8A /* Bodyweight_Legs.mp4 */; };
+		E1A901212DD3591A00DF6E8A /* Workout.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A901032DD3591A00DF6E8A /* Workout.png */; };
+		E1A901222DD3591A00DF6E8A /* FlexGenius.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A900F32DD3591A00DF6E8A /* FlexGenius.png */; };
+		E1A901232DD3591A00DF6E8A /* Lazada.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A900F52DD3591A00DF6E8A /* Lazada.png */; };
+		E1A901242DD3591A00DF6E8A /* Fitwhey.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A900F42DD3591A00DF6E8A /* Fitwhey.png */; };
+		E1A901252DD3591A00DF6E8A /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A900F92DD3591A00DF6E8A /* Back.png */; };
+		E1A901262DD3591A00DF6E8A /* snackData.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1A901172DD3591A00DF6E8A /* snackData.plist */; };
+		E1A901272DD3591A00DF6E8A /* Food.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A901012DD3591A00DF6E8A /* Food.png */; };
+		E1A901282DD3591A00DF6E8A /* Chest.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A900FA2DD3591A00DF6E8A /* Chest.png */; };
+		E1A901292DD3591A00DF6E8A /* Bodyweight_Back.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E1A901062DD3591A00DF6E8A /* Bodyweight_Back.mp4 */; };
+		E1A9012A2DD3591A00DF6E8A /* Weight training_Abs.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E1A9010B2DD3591A00DF6E8A /* Weight training_Abs.mp4 */; };
+		E1A9012B2DD3591A00DF6E8A /* Upper body.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A900FD2DD3591A00DF6E8A /* Upper body.png */; };
+		E1A9012C2DD3591A00DF6E8A /* Bodyweight_Chest.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E1A901072DD3591A00DF6E8A /* Bodyweight_Chest.mp4 */; };
+		E1A9012D2DD3591A00DF6E8A /* foodData.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1A901162DD3591A00DF6E8A /* foodData.plist */; };
+		E1A9012E2DD3591A00DF6E8A /* exerciseData.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1A901152DD3591A00DF6E8A /* exerciseData.plist */; };
+		E1A9012F2DD3591A00DF6E8A /* Weight training_Legs.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E1A9010E2DD3591A00DF6E8A /* Weight training_Legs.mp4 */; };
+		E1A901302DD3591A00DF6E8A /* Bodyweight.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A900FF2DD3591A00DF6E8A /* Bodyweight.png */; };
+		E1A901312DD3591A00DF6E8A /* Bodyweight_Lower body.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E1A901092DD3591A00DF6E8A /* Bodyweight_Lower body.mp4 */; };
+		E1A901322DD3591A00DF6E8A /* Shopee.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A900F62DD3591A00DF6E8A /* Shopee.png */; };
+		E1A901332DD3591A00DF6E8A /* Weight training_Back.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E1A9010C2DD3591A00DF6E8A /* Weight training_Back.mp4 */; };
+		E1A901342DD3591A00DF6E8A /* Lower body.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A900FC2DD3591A00DF6E8A /* Lower body.png */; };
+		E1A901352DD3591A00DF6E8A /* Abs.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A900F82DD3591A00DF6E8A /* Abs.png */; };
+		E1A901362DD3591A00DF6E8A /* shopData.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1A901182DD3591A00DF6E8A /* shopData.plist */; };
+		E1A901372DD3591A00DF6E8A /* Weight training_Upper body.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E1A901102DD3591A00DF6E8A /* Weight training_Upper body.mp4 */; };
+		E1A901382DD3591A00DF6E8A /* Shop.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A901022DD3591A00DF6E8A /* Shop.png */; };
+		E1A901392DD3591A00DF6E8A /* Bodyweight_Upper body.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E1A9010A2DD3591A00DF6E8A /* Bodyweight_Upper body.mp4 */; };
+		E1A9013A2DD3591A00DF6E8A /* Weight training.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A901002DD3591A00DF6E8A /* Weight training.png */; };
+		E1A9013B2DD3591A00DF6E8A /* Bodyweight_Abs.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E1A901052DD3591A00DF6E8A /* Bodyweight_Abs.mp4 */; };
+		E1A9013D2DD3BAC400DF6E8A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A9013C2DD3BAC100DF6E8A /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +94,15 @@
 		30FCC3352DD33CD000745018 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		30FCC3372DD33FB900745018 /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
 		30FCC3392DD3489F00745018 /* DrawerLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerLayoutView.swift; sourceTree = "<group>"; };
+		30FCC33B2DD3A8AE00745018 /* WorkoutStyleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStyleSelectionView.swift; sourceTree = "<group>"; };
+		30FCC33D2DD3BE3E00745018 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
 		95454EB82DCE24BC00DD5D75 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		95C284392DD38040000D6901 /* FoodRecognitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecognitionView.swift; sourceTree = "<group>"; };
+		95C2843B2DD3807D000D6901 /* FoodRecognitionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecognitionViewModel.swift; sourceTree = "<group>"; };
+		95C2843D2DD380B6000D6901 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		95C2843F2DD380F0000D6901 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		95C284412DD38117000D6901 /* FoodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodService.swift; sourceTree = "<group>"; };
+		95C284442DD39268000D6901 /* Food101.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Food101.mlmodel; sourceTree = "<group>"; };
 		E10CE2112DD25983009B0821 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E10CE2132DD25A89009B0821 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E10CE2682DD25D6C009B0821 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -66,6 +116,40 @@
 		E161D9EE2DC22C1E00F0D451 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E1A900ED2DD2914700DF6E8A /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		E1A900F12DD2A81800DF6E8A /* NavigationBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarConfig.swift; sourceTree = "<group>"; };
+		E1A900F32DD3591A00DF6E8A /* FlexGenius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FlexGenius.png; path = SwiftUIAppFinal2568/Data/FlexGenius.png; sourceTree = SOURCE_ROOT; };
+		E1A900F42DD3591A00DF6E8A /* Fitwhey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fitwhey.png; path = SwiftUIAppFinal2568/Data/Fitwhey.png; sourceTree = SOURCE_ROOT; };
+		E1A900F52DD3591A00DF6E8A /* Lazada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Lazada.png; path = SwiftUIAppFinal2568/Data/Lazada.png; sourceTree = SOURCE_ROOT; };
+		E1A900F62DD3591A00DF6E8A /* Shopee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shopee.png; path = SwiftUIAppFinal2568/Data/Shopee.png; sourceTree = SOURCE_ROOT; };
+		E1A900F82DD3591A00DF6E8A /* Abs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Abs.png; path = SwiftUIAppFinal2568/Data/Abs.png; sourceTree = SOURCE_ROOT; };
+		E1A900F92DD3591A00DF6E8A /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Back.png; path = SwiftUIAppFinal2568/Data/Back.png; sourceTree = SOURCE_ROOT; };
+		E1A900FA2DD3591A00DF6E8A /* Chest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chest.png; path = SwiftUIAppFinal2568/Data/Chest.png; sourceTree = SOURCE_ROOT; };
+		E1A900FB2DD3591A00DF6E8A /* Legs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Legs.png; path = SwiftUIAppFinal2568/Data/Legs.png; sourceTree = SOURCE_ROOT; };
+		E1A900FC2DD3591A00DF6E8A /* Lower body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Lower body.png"; path = "SwiftUIAppFinal2568/Data/Lower body.png"; sourceTree = SOURCE_ROOT; };
+		E1A900FD2DD3591A00DF6E8A /* Upper body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Upper body.png"; path = "SwiftUIAppFinal2568/Data/Upper body.png"; sourceTree = SOURCE_ROOT; };
+		E1A900FF2DD3591A00DF6E8A /* Bodyweight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bodyweight.png; path = SwiftUIAppFinal2568/Data/Bodyweight.png; sourceTree = SOURCE_ROOT; };
+		E1A901002DD3591A00DF6E8A /* Weight training.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Weight training.png"; path = "SwiftUIAppFinal2568/Data/Weight training.png"; sourceTree = SOURCE_ROOT; };
+		E1A901012DD3591A00DF6E8A /* Food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Food.png; path = SwiftUIAppFinal2568/Data/Food.png; sourceTree = SOURCE_ROOT; };
+		E1A901022DD3591A00DF6E8A /* Shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shop.png; path = SwiftUIAppFinal2568/Data/Shop.png; sourceTree = SOURCE_ROOT; };
+		E1A901032DD3591A00DF6E8A /* Workout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Workout.png; path = SwiftUIAppFinal2568/Data/Workout.png; sourceTree = SOURCE_ROOT; };
+		E1A901052DD3591A00DF6E8A /* Bodyweight_Abs.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bodyweight_Abs.mp4; path = SwiftUIAppFinal2568/Data/Bodyweight_Abs.mp4; sourceTree = SOURCE_ROOT; };
+		E1A901062DD3591A00DF6E8A /* Bodyweight_Back.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bodyweight_Back.mp4; path = SwiftUIAppFinal2568/Data/Bodyweight_Back.mp4; sourceTree = SOURCE_ROOT; };
+		E1A901072DD3591A00DF6E8A /* Bodyweight_Chest.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bodyweight_Chest.mp4; path = SwiftUIAppFinal2568/Data/Bodyweight_Chest.mp4; sourceTree = SOURCE_ROOT; };
+		E1A901082DD3591A00DF6E8A /* Bodyweight_Legs.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bodyweight_Legs.mp4; path = SwiftUIAppFinal2568/Data/Bodyweight_Legs.mp4; sourceTree = SOURCE_ROOT; };
+		E1A901092DD3591A00DF6E8A /* Bodyweight_Lower body.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bodyweight_Lower body.mp4"; path = "SwiftUIAppFinal2568/Data/Bodyweight_Lower body.mp4"; sourceTree = SOURCE_ROOT; };
+		E1A9010A2DD3591A00DF6E8A /* Bodyweight_Upper body.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bodyweight_Upper body.mp4"; path = "SwiftUIAppFinal2568/Data/Bodyweight_Upper body.mp4"; sourceTree = SOURCE_ROOT; };
+		E1A9010B2DD3591A00DF6E8A /* Weight training_Abs.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Weight training_Abs.mp4"; path = "SwiftUIAppFinal2568/Data/Weight training_Abs.mp4"; sourceTree = SOURCE_ROOT; };
+		E1A9010C2DD3591A00DF6E8A /* Weight training_Back.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Weight training_Back.mp4"; path = "SwiftUIAppFinal2568/Data/Weight training_Back.mp4"; sourceTree = SOURCE_ROOT; };
+		E1A9010D2DD3591A00DF6E8A /* Weight training_Chest.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Weight training_Chest.mp4"; path = "SwiftUIAppFinal2568/Data/Weight training_Chest.mp4"; sourceTree = SOURCE_ROOT; };
+		E1A9010E2DD3591A00DF6E8A /* Weight training_Legs.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Weight training_Legs.mp4"; path = "SwiftUIAppFinal2568/Data/Weight training_Legs.mp4"; sourceTree = SOURCE_ROOT; };
+		E1A9010F2DD3591A00DF6E8A /* Weight training_Lower body.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Weight training_Lower body.mp4"; path = "SwiftUIAppFinal2568/Data/Weight training_Lower body.mp4"; sourceTree = SOURCE_ROOT; };
+		E1A901102DD3591A00DF6E8A /* Weight training_Upper body.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Weight training_Upper body.mp4"; path = "SwiftUIAppFinal2568/Data/Weight training_Upper body.mp4"; sourceTree = SOURCE_ROOT; };
+		E1A901132DD3591A00DF6E8A /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		E1A901152DD3591A00DF6E8A /* exerciseData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = exerciseData.plist; sourceTree = "<group>"; };
+		E1A901162DD3591A00DF6E8A /* foodData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = foodData.plist; sourceTree = "<group>"; };
+		E1A901172DD3591A00DF6E8A /* snackData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = snackData.plist; sourceTree = "<group>"; };
+		E1A901182DD3591A00DF6E8A /* shopData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = shopData.plist; sourceTree = "<group>"; };
+		E1A901192DD3591A00DF6E8A /* plistLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plistLoader.swift; sourceTree = "<group>"; };
+		E1A9013C2DD3BAC100DF6E8A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +169,17 @@
 		E10CE2102DD2596C009B0821 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				95C284442DD39268000D6901 /* Food101.mlmodel */,
+				E1A901122DD3591A00DF6E8A /* File */,
 				E10CE2672DD25D5E009B0821 /* Models */,
 				E10CE2112DD25983009B0821 /* AuthService.swift */,
 				E1A900ED2DD2914700DF6E8A /* UserAuth.swift */,
+				E1A901132DD3591A00DF6E8A /* AlertManager.swift */,
+				E1A901192DD3591A00DF6E8A /* plistLoader.swift */,
+				E1A901152DD3591A00DF6E8A /* exerciseData.plist */,
+				E1A901162DD3591A00DF6E8A /* foodData.plist */,
+				E1A901172DD3591A00DF6E8A /* snackData.plist */,
+				E1A901182DD3591A00DF6E8A /* shopData.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -124,11 +216,18 @@
 			children = (
 				E10CE2102DD2596C009B0821 /* Data */,
 				E161D9E72DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift */,
+				95C284392DD38040000D6901 /* FoodRecognitionView.swift */,
+				95C2843B2DD3807D000D6901 /* FoodRecognitionViewModel.swift */,
+				95C2843D2DD380B6000D6901 /* CameraView.swift */,
+				95C2843F2DD380F0000D6901 /* ImagePicker.swift */,
+				95C284412DD38117000D6901 /* FoodService.swift */,
 				3028DACA2DD2511E00E56379 /* MainTabView.swift */,
 				30FCC3392DD3489F00745018 /* DrawerLayoutView.swift */,
 				3028DAD22DD2552800E56379 /* ShopView.swift */,
 				30FCC32F2DD3225000745018 /* ProductDetailView.swift */,
 				3028DACE2DD254D100E56379 /* WorkoutView.swift */,
+				30FCC33B2DD3A8AE00745018 /* WorkoutStyleSelectionView.swift */,
+				30FCC33D2DD3BE3E00745018 /* WorkoutDetailView.swift */,
 				3028DAD02DD254DE00E56379 /* FoodView.swift */,
 				30FCC3332DD32CE200745018 /* FoodItem.swift */,
 				30FCC3312DD3294300745018 /* AddFoodView.swift */,
@@ -139,6 +238,7 @@
 				3028DAC42DD221A100E56379 /* RegisterView.swift */,
 				3028DAC62DD2220B00E56379 /* GoalSelectionView.swift */,
 				E161D9E92DC22C1D00F0D451 /* ContentView.swift */,
+				E1A9013C2DD3BAC100DF6E8A /* MainView.swift */,
 				E161D9EB2DC22C1E00F0D451 /* Assets.xcassets */,
 				E161D9ED2DC22C1E00F0D451 /* Preview Content */,
 				E1A900F12DD2A81800DF6E8A /* NavigationBarConfig.swift */,
@@ -153,6 +253,72 @@
 				E161D9EE2DC22C1E00F0D451 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E1A900F72DD3591A00DF6E8A /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				E1A900F42DD3591A00DF6E8A /* Fitwhey.png */,
+				E1A900F52DD3591A00DF6E8A /* Lazada.png */,
+				E1A900F62DD3591A00DF6E8A /* Shopee.png */,
+			);
+			name = Shop;
+			sourceTree = "<group>";
+		};
+		E1A900FE2DD3591A00DF6E8A /* Body Part */ = {
+			isa = PBXGroup;
+			children = (
+				E1A900F82DD3591A00DF6E8A /* Abs.png */,
+				E1A900F92DD3591A00DF6E8A /* Back.png */,
+				E1A900FA2DD3591A00DF6E8A /* Chest.png */,
+				E1A900FB2DD3591A00DF6E8A /* Legs.png */,
+				E1A900FC2DD3591A00DF6E8A /* Lower body.png */,
+				E1A900FD2DD3591A00DF6E8A /* Upper body.png */,
+			);
+			name = "Body Part";
+			sourceTree = "<group>";
+		};
+		E1A901042DD3591A00DF6E8A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E1A900F32DD3591A00DF6E8A /* FlexGenius.png */,
+				E1A900F72DD3591A00DF6E8A /* Shop */,
+				E1A900FE2DD3591A00DF6E8A /* Body Part */,
+				E1A900FF2DD3591A00DF6E8A /* Bodyweight.png */,
+				E1A901002DD3591A00DF6E8A /* Weight training.png */,
+				E1A901012DD3591A00DF6E8A /* Food.png */,
+				E1A901022DD3591A00DF6E8A /* Shop.png */,
+				E1A901032DD3591A00DF6E8A /* Workout.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E1A901112DD3591A00DF6E8A /* Exercise Clip */ = {
+			isa = PBXGroup;
+			children = (
+				E1A901052DD3591A00DF6E8A /* Bodyweight_Abs.mp4 */,
+				E1A901062DD3591A00DF6E8A /* Bodyweight_Back.mp4 */,
+				E1A901072DD3591A00DF6E8A /* Bodyweight_Chest.mp4 */,
+				E1A901082DD3591A00DF6E8A /* Bodyweight_Legs.mp4 */,
+				E1A901092DD3591A00DF6E8A /* Bodyweight_Lower body.mp4 */,
+				E1A9010A2DD3591A00DF6E8A /* Bodyweight_Upper body.mp4 */,
+				E1A9010B2DD3591A00DF6E8A /* Weight training_Abs.mp4 */,
+				E1A9010C2DD3591A00DF6E8A /* Weight training_Back.mp4 */,
+				E1A9010D2DD3591A00DF6E8A /* Weight training_Chest.mp4 */,
+				E1A9010E2DD3591A00DF6E8A /* Weight training_Legs.mp4 */,
+				E1A9010F2DD3591A00DF6E8A /* Weight training_Lower body.mp4 */,
+				E1A901102DD3591A00DF6E8A /* Weight training_Upper body.mp4 */,
+			);
+			name = "Exercise Clip";
+			sourceTree = "<group>";
+		};
+		E1A901122DD3591A00DF6E8A /* File */ = {
+			isa = PBXGroup;
+			children = (
+				E1A901042DD3591A00DF6E8A /* Images */,
+				E1A901112DD3591A00DF6E8A /* Exercise Clip */,
+			);
+			name = File;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +390,37 @@
 				E161D9EF2DC22C1E00F0D451 /* Preview Assets.xcassets in Resources */,
 				E161D9EC2DC22C1E00F0D451 /* Assets.xcassets in Resources */,
 				E10CE2142DD25A89009B0821 /* GoogleService-Info.plist in Resources */,
+				E1A9011D2DD3591A00DF6E8A /* Weight training_Chest.mp4 in Resources */,
+				E1A9011E2DD3591A00DF6E8A /* Weight training_Lower body.mp4 in Resources */,
+				E1A9011F2DD3591A00DF6E8A /* Legs.png in Resources */,
+				E1A901202DD3591A00DF6E8A /* Bodyweight_Legs.mp4 in Resources */,
+				E1A901212DD3591A00DF6E8A /* Workout.png in Resources */,
+				E1A901222DD3591A00DF6E8A /* FlexGenius.png in Resources */,
+				E1A901232DD3591A00DF6E8A /* Lazada.png in Resources */,
+				E1A901242DD3591A00DF6E8A /* Fitwhey.png in Resources */,
+				E1A901252DD3591A00DF6E8A /* Back.png in Resources */,
+				E1A901262DD3591A00DF6E8A /* snackData.plist in Resources */,
+				E1A901272DD3591A00DF6E8A /* Food.png in Resources */,
+				E1A901282DD3591A00DF6E8A /* Chest.png in Resources */,
+				E1A901292DD3591A00DF6E8A /* Bodyweight_Back.mp4 in Resources */,
+				E1A9012A2DD3591A00DF6E8A /* Weight training_Abs.mp4 in Resources */,
+				E1A9012B2DD3591A00DF6E8A /* Upper body.png in Resources */,
+				E1A9012C2DD3591A00DF6E8A /* Bodyweight_Chest.mp4 in Resources */,
+				E1A9012D2DD3591A00DF6E8A /* foodData.plist in Resources */,
+				E1A9012E2DD3591A00DF6E8A /* exerciseData.plist in Resources */,
+				E1A9012F2DD3591A00DF6E8A /* Weight training_Legs.mp4 in Resources */,
+				E1A901302DD3591A00DF6E8A /* Bodyweight.png in Resources */,
+				E1A901312DD3591A00DF6E8A /* Bodyweight_Lower body.mp4 in Resources */,
+				E1A901322DD3591A00DF6E8A /* Shopee.png in Resources */,
+				E1A901332DD3591A00DF6E8A /* Weight training_Back.mp4 in Resources */,
+				E1A901342DD3591A00DF6E8A /* Lower body.png in Resources */,
+				E1A901352DD3591A00DF6E8A /* Abs.png in Resources */,
+				E1A901362DD3591A00DF6E8A /* shopData.plist in Resources */,
+				E1A901372DD3591A00DF6E8A /* Weight training_Upper body.mp4 in Resources */,
+				E1A901382DD3591A00DF6E8A /* Shop.png in Resources */,
+				E1A901392DD3591A00DF6E8A /* Bodyweight_Upper body.mp4 in Resources */,
+				E1A9013A2DD3591A00DF6E8A /* Weight training.png in Resources */,
+				E1A9013B2DD3591A00DF6E8A /* Bodyweight_Abs.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,27 +431,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C284452DD39268000D6901 /* Food101.mlmodel in Sources */,
 				3028DAD12DD254DE00E56379 /* FoodView.swift in Sources */,
 				E161D9EA2DC22C1D00F0D451 /* ContentView.swift in Sources */,
 				3028DAC72DD2220B00E56379 /* GoalSelectionView.swift in Sources */,
 				30FCC3382DD33FB900745018 /* TrackingView.swift in Sources */,
 				3028DACF2DD254D100E56379 /* WorkoutView.swift in Sources */,
 				30FCC3342DD32CE200745018 /* FoodItem.swift in Sources */,
+				30FCC33C2DD3A8AE00745018 /* WorkoutStyleSelectionView.swift in Sources */,
 				95454EB92DCE24BC00DD5D75 /* LoginView.swift in Sources */,
 				3028DACD2DD252B600E56379 /* DashboardView.swift in Sources */,
+				E1A9013D2DD3BAC400DF6E8A /* MainView.swift in Sources */,
 				3028DACB2DD2511E00E56379 /* MainTabView.swift in Sources */,
 				30FCC33A2DD3489F00745018 /* DrawerLayoutView.swift in Sources */,
 				E10CE2122DD25983009B0821 /* AuthService.swift in Sources */,
+				30FCC33E2DD3BE3E00745018 /* WorkoutDetailView.swift in Sources */,
 				E10CE26C2DD25D6C009B0821 /* User.swift in Sources */,
 				E10CE26D2DD25D6C009B0821 /* Food.swift in Sources */,
 				E1A900F22DD2A81800DF6E8A /* NavigationBarConfig.swift in Sources */,
 				E1A900EE2DD2914700DF6E8A /* UserAuth.swift in Sources */,
+				95C2843E2DD380B6000D6901 /* CameraView.swift in Sources */,
 				E10CE26E2DD25D6C009B0821 /* LoginUserRequest.swift in Sources */,
+				95C284402DD380F0000D6901 /* ImagePicker.swift in Sources */,
 				E10CE26F2DD25D6C009B0821 /* RegisterUserRequest.swift in Sources */,
+				95C284422DD38117000D6901 /* FoodService.swift in Sources */,
 				3028DAC52DD221A100E56379 /* RegisterView.swift in Sources */,
+				95C2843A2DD38040000D6901 /* FoodRecognitionView.swift in Sources */,
+				E1A9011A2DD3591A00DF6E8A /* AlertManager.swift in Sources */,
+				E1A9011B2DD3591A00DF6E8A /* plistLoader.swift in Sources */,
 				3028DAD32DD2552800E56379 /* ShopView.swift in Sources */,
 				30FCC3362DD33CD000745018 /* DiaryView.swift in Sources */,
 				30FCC3322DD3294300745018 /* AddFoodView.swift in Sources */,
+				95C2843C2DD3807D000D6901 /* FoodRecognitionViewModel.swift in Sources */,
 				E161D9E82DC22C1D00F0D451 /* SwiftUIAppFinal2568App.swift in Sources */,
 				30FCC3302DD3225000745018 /* ProductDetailView.swift in Sources */,
 			);
@@ -390,13 +598,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIAppFinal2568/Preview Content\"";
+				DEVELOPMENT_TEAM = KR2GJB29TL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIAppFinal2568/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ขอใช้กล้องหน่อยครับ";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "ขอเพิ่มรูปไปที่Libraryหน่อยครับ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "ขอเข้าถึงLibraryหน่อยครับ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,13 +632,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIAppFinal2568/Preview Content\"";
+				DEVELOPMENT_TEAM = KR2GJB29TL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIAppFinal2568/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ขอใช้กล้องหน่อยครับ";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "ขอเพิ่มรูปไปที่Libraryหน่อยครับ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "ขอเข้าถึงLibraryหน่อยครับ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

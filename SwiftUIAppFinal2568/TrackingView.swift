@@ -24,13 +24,8 @@ enum ExerciseStatus: String, Codable {
 }
 
 struct TrackingView: View {
-    @State private var exercises: [ExerciseItem] = [
-        ExerciseItem(name: "Pushup", reps: "12–15\n(4 sets)", rest: "1–2 min."),
-        ExerciseItem(name: "Decline pushup", reps: "12–15\n(4 sets)", rest: "1–2 min."),
-        ExerciseItem(name: "Pike pushup", reps: "12–15\n(4 sets)", rest: "1–2 min."),
-        ExerciseItem(name: "Superman", reps: "12–15\n(4 sets)", rest: "1–2 min."),
-        ExerciseItem(name: "Tricep Dips", reps: "12–15\n(4 sets)", rest: "1–2 min.")
-    ]
+    @EnvironmentObject var exerciseState: ExerciseState
+
 
     private var db = Firestore.firestore()
 
@@ -62,8 +57,8 @@ struct TrackingView: View {
 
             Divider().background(Color.white)
 
-            ForEach(exercises.indices, id: \.self) { index in
-                let exercise = exercises[index]
+            let exerciseList = Array(exerciseState.selectedExercises.enumerated())
+            ForEach(exerciseList, id: \.offset) { index, exercise in
                 Button {
                     startAndToggleStatus(at: index)
                 } label: {
@@ -121,21 +116,21 @@ struct TrackingView: View {
 
     // MARK: - Logic
     func startAndToggleStatus(at index: Int) {
-        exercises[index].hasStarted = true
-
-        switch exercises[index].status {
-        case nil:
-            exercises[index].status = .waiting
-        case .waiting:
-            exercises[index].status = .inProgress
-        case .inProgress:
-            exercises[index].status = .done
-        case .done:
-            exercises[index].status = nil
-            exercises[index].hasStarted = false
-        }
-
-        saveToFirebase(exercises[index])
+//        exercise[index].hasStarted = true
+//
+//        switch exercises[index].status {
+//        case nil:
+//            exercises[index].status = .waiting
+//        case .waiting:
+//            exercises[index].status = .inProgress
+//        case .inProgress:
+//            exercises[index].status = .done
+//        case .done:
+//            exercises[index].status = nil
+//            exercises[index].hasStarted = false
+//        }
+//
+//        saveToFirebase(exercises[index])
     }
 
     // MARK: - UI Helpers
@@ -183,4 +178,5 @@ struct TrackingView: View {
 
 #Preview {
     TrackingView()
+        .environmentObject(ExerciseState())
 }

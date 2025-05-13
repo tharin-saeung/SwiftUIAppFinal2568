@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Fitwhey</key>
+	<string>https://fitwhey.com/</string>
+	<key>Shopee</key>
+	<string>https://shopee.co.th/fitwheythailand</string>
+	<key>Lazada</key>
+	<string>https://www.lazada.co.th/shop/fitwhey/?spm=a2o4m.pdp_revamp.seller.1.50481d10atQy2O&amp;itemId=324728514&amp;channelSource=pdp</string>
+</dict>
+</plist>
