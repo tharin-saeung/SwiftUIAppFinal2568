@@ -10,8 +10,13 @@ import Combine
 
 class UserAuth: ObservableObject {
     @Published var isLoggedin:Bool = false
+    @Published var isRegistering:Bool = false
     
     func login() {
         self.isLoggedin = true
+    }
+    
+    func toggleRegistering() {
+        self.isRegistering.toggle()
     }
 }

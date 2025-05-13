@@ -4,7 +4,8 @@ import FirebaseAuth
 struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
-    @State private var errorMessage: String?
+    @State private var emailError: String?
+    @State private var passwordError: String?
     @State private var isLoggedIn = false
     @EnvironmentObject  var  userAuth: UserAuth
     @State private var isNavigationBarHidden = true
@@ -14,7 +15,7 @@ struct LoginView: View {
         let request = LoginUserRequest(email: email, password: password)
         AuthService.shared.signIn(with: request) { error in
             if error != nil {
-                self.errorMessage = "Wrong username or password. Please try again."
+                self.passwordError = "Wrong username or password. Please try again."
                 return
             }
             
@@ -22,7 +23,7 @@ struct LoginView: View {
                 isLoggedIn = true
                 self.userAuth.login()
             } else {
-                self.errorMessage = "Unable to login. Please try again."
+                self.passwordError = "Unable to login. Please try again."
             }
         }
     }
@@ -44,56 +45,38 @@ struct LoginView: View {
                         .foregroundColor(.white)
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
+                        .autocorrectionDisabled()
                         .onChange(of: email, {
-                            if ((invalidEmail(email) != nil) || (invalidPassword(password) != nil))
-                            {
-                                self.loginButtonDisabled = true
-                                if (invalidEmail(email) != nil)
-                                {
-                                    errorMessage = invalidEmail(email)
-                                }
-                                else if (invalidPassword(password) != nil)
-                                {
-                                    errorMessage = invalidPassword(password)
-                                }
-                            }
-                            else
-                            {
-                                self.loginButtonDisabled = false
-                                errorMessage = nil
-                            }
+                            emailError = invalidEmail(email)
+                            passwordError = invalidPassword(password)
+                            loginButtonDisabled = emailError != nil || passwordError != nil
                         })
+                    
+                    if let emailError = emailError {
+                        Text(emailError)
+                            .foregroundColor(.red)
+                            .font(.caption)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
                     
                     SecureField("Password", text: $password, prompt: Text("Password").foregroundColor(.gray))
                         .padding()
                         .background(Color.white.opacity(0.1))
                         .cornerRadius(10)
                         .foregroundColor(.white)
+                        .autocapitalization(.none)
+                        .autocorrectionDisabled()
                         .onChange(of: password, {
-                            if (invalidEmail(email) != nil || invalidPassword(password) != nil)
-                            {
-                                self.loginButtonDisabled = true
-                                if (invalidEmail(email) != nil)
-                                {
-                                    errorMessage = invalidEmail(email)
-                                }
-                                else if (invalidPassword(password) != nil)
-                                {
-                                    errorMessage = invalidPassword(password)
-                                }
-                            }
-                            else
-                            {
-                                self.loginButtonDisabled = false
-                                errorMessage = nil
-                            }
+                            emailError = invalidEmail(email)
+                            passwordError = invalidPassword(password)
+                            loginButtonDisabled = emailError != nil || passwordError != nil
                         })
-                    
-                    if let errorMessage = errorMessage {
-                        Text(errorMessage)
+
+                    if let passwordError = passwordError {
+                        Text(passwordError)
                             .foregroundColor(.red)
                             .font(.caption)
-                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
                     
                     Button(action: handleLogin) {
@@ -106,7 +89,7 @@ struct LoginView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color(hex: "#7353BA"))
+                    .background(self.loginButtonDisabled ? Color(hex: "#7353BA").opacity(0.3) : Color(hex: "#7353BA"))
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .padding(.horizontal)

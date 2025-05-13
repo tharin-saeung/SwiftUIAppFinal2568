@@ -14,8 +14,13 @@ struct RegisterView: View {
     @State private var firstName = ""
     @State private var lastName = ""
     
-    @State private var errorMessage = ""
     @State private var showError = false
+    @State private var emailError: String?
+    @State private var passwordError: String?
+    @State private var verifyPasswordError: String?
+    @State private var firstNameError: String?
+    @State private var lastNameError: String?
+    
     @State private var isRegistered = false
     @State private var isLoggedIn = false
     @EnvironmentObject  var  userAuth: UserAuth
@@ -27,17 +32,42 @@ struct RegisterView: View {
                 Spacer()
                 Group {
                     CustomRoundedField(label: "Email", text: $email)
-                    CustomSecureField(label: "Password", text: $password)
-                    CustomSecureField(label: "Verify Password", text: $verifyPassword)
-                    CustomRoundedField(label: "First Name", text: $firstName)
-                    CustomRoundedField(label: "Last Name", text: $lastName)
-                }
+                        .keyboardType(.emailAddress)
+                        .autocapitalization(.none)
+                        .autocorrectionDisabled()
+                    if let emailError = emailError {
+                        Text(emailError).foregroundColor(.red).font(.caption)
+                    }
 
-                if showError {
-                    Text(errorMessage)
-                        .foregroundColor(.red)
-                        .font(.caption)
+                    CustomSecureField(label: "Password", text: $password)
+                        .autocapitalization(.none)
+                        .autocorrectionDisabled()
+                    if let passwordError = passwordError {
+                        Text(passwordError).foregroundColor(.red).font(.caption)
+                    }
+
+                    CustomSecureField(label: "Verify Password", text: $verifyPassword)
+                        .autocapitalization(.none)
+                        .autocorrectionDisabled()
+                    if let verifyPasswordError = verifyPasswordError {
+                        Text(verifyPasswordError).foregroundColor(.red).font(.caption)
+                    }
+
+                    CustomRoundedField(label: "First Name", text: $firstName)
+                        .keyboardType(.alphabet)
+                        .autocorrectionDisabled()
+                    if let firstNameError = firstNameError {
+                        Text(firstNameError).foregroundColor(.red).font(.caption)
+                    }
+
+                    CustomRoundedField(label: "Last Name", text: $lastName)
+                        .keyboardType(.alphabet)
+                        .autocorrectionDisabled()
+                    if let lastNameError = lastNameError {
+                        Text(lastNameError).foregroundColor(.red).font(.caption)
+                    }
                 }
+                
                     Spacer()
                     Button("Register") {
                         register()
@@ -56,6 +86,9 @@ struct RegisterView: View {
                 self.isNavigationBarHidden = true
             }
         }
+        .onAppear() {
+            self.userAuth.toggleRegistering()
+        }
     }
 
     private func register() {
@@ -71,7 +104,7 @@ struct RegisterView: View {
         AuthService.shared.registerUser(with: request) { wasRegistered, error in
             if let error = error {
                 DispatchQueue.main.async {
-                    self.errorMessage = error.localizedDescription
+                    self.lastNameError = error.localizedDescription
                     self.showError = true
                 }
                 return
@@ -80,9 +113,10 @@ struct RegisterView: View {
             if wasRegistered {
                 self.login() // login after register
                 self.isRegistered = true
+                self.userAuth.toggleRegistering()
             } else {
                 DispatchQueue.main.async {
-                    self.errorMessage = "Registration failed. Please try again."
+                    self.lastNameError = "Registration failed. Please try again."
                     self.showError = true
                 }
             }
@@ -95,7 +129,7 @@ struct RegisterView: View {
         AuthService.shared.signIn(with: request) { error in
             DispatchQueue.main.async {
                 if let error = error {
-                    self.errorMessage = "Login failed: \(error.localizedDescription)"
+                    self.lastNameError = "Login failed: \(error.localizedDescription)"
                     self.showError = true
                     return
                 }
@@ -103,7 +137,7 @@ struct RegisterView: View {
                 if AuthService.shared.checkAuth() {
                     self.userAuth.login()
                 } else {
-                    self.errorMessage = "Unable to login. Please try again."
+                    self.lastNameError = "Unable to login. Please try again."
                     self.showError = true
                 }
             }
@@ -112,17 +146,45 @@ struct RegisterView: View {
 
 
     private func validateForm() -> Bool {
-        if email.isEmpty || password.isEmpty || verifyPassword.isEmpty || firstName.isEmpty || lastName.isEmpty {
-            errorMessage = "All fields are required."
-            showError = true
-            return false
+        // Reset all errors
+        emailError = nil
+        passwordError = nil
+        verifyPasswordError = nil
+        firstNameError = nil
+        lastNameError = nil
+        showError = false
+
+        var isValid = true
+
+        if let error = invalidEmail(email) {
+            emailError = error
+            isValid = false
         }
-        if password != verifyPassword {
-            errorMessage = "Passwords do not match."
-            showError = true
-            return false
+
+        if let error = invalidPassword(password) {
+            passwordError = error
+            isValid = false
         }
-        return true
+
+        if verifyPassword.isEmpty {
+            verifyPasswordError = "Please verify your password."
+            isValid = false
+        } else if password != verifyPassword {
+            verifyPasswordError = "Passwords do not match."
+            isValid = false
+        }
+
+        if let error = invalidFirstName(firstName) {
+            firstNameError = error
+            isValid = false
+        }
+
+        if let error = invalidLastName(lastName) {
+            lastNameError = error
+            isValid = false
+        }
+
+        return isValid
     }
 }
 
@@ -187,4 +249,30 @@ struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
         RegisterView()
     }
+}
+
+private func invalidFirstName(_ value: String) -> String? {
+    if value.isEmpty {
+        return "First name is required."
+    }
+    if !containsLowerCase(value) {
+        return "First name must contain at least 1 lowercase"
+    }
+    if !containsUpperCase(value) {
+        return "First name must contain at least 1 uppercase"
+    }
+    if value.count < 3 {
+        return "First name must contain at least 3 characters"
+    }
+    return nil
+}
+
+private func invalidLastName(_ value: String) -> String? {
+    if value.isEmpty {
+        return "Last name is required."
+    }
+    if !containsUpperCase(value) {
+        return "Last name must contain at least 1 uppercase"
+    }
+    return nil
 }
