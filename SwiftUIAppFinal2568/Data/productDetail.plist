@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>amino</key>
+	<dict>
+		<key>description</key>
+		<string>กรดอะมิโนเป็นหน่วยย่อยของโปรตีน มีบทบาทสำคัญในการสร้างและซ่อมแซมกล้ามเนื้อ เสริมสร้างระบบภูมิคุ้มกัน และช่วยในการทำงานของระบบประสาท</string>
+		<key>title</key>
+		<string>Amino Acids</string>
+	</dict>
+	<key>equipment</key>
+	<dict>
+		<key>description</key>
+		<string>อุปกรณ์ออกกำลังกาย เช่น ดัมเบล บาร์เบล และเครื่องออกกำลังกายต่าง ๆ ช่วยเสริมสร้างกล้ามเนื้อและความแข็งแรงของร่างกาย เหมาะสำหรับการฝึกซ้อมที่บ้านหรือในยิม</string>
+		<key>title</key>
+		<string>Equipment &amp; Stuff</string>
+	</dict>
+	<key>preworkout</key>
+	<dict>
+		<key>description</key>
+		<string>อาหารเสริมก่อนออกกำลังกายที่ช่วยเพิ่มพลังงาน ความทนทาน และสมาธิ มีส่วนผสมหลักเช่น คาเฟอีน L-citrulline และ Beta-Alanine ช่วยให้การออกกำลังกายมีประสิทธิภาพมากขึ้น</string>
+		<key>title</key>
+		<string>Pre-workout</string>
+	</dict>
+	<key>vitamin</key>
+	<dict>
+		<key>description</key>
+		<string>วิตามินเป็นสารอาหารที่จำเป็นต่อการทำงานของร่างกาย ช่วยในกระบวนการเผาผลาญ การเจริญเติบโต และเสริมสร้างระบบภูมิคุ้มกัน มีทั้งวิตามินที่ละลายในไขมันและน้ำ ซึ่งควรได้รับจากอาหารที่หลากหลาย</string>
+		<key>title</key>
+		<string>Vitamins</string>
+	</dict>
+	<key>watch</key>
+	<dict>
+		<key>description</key>
+		<string>อุปกรณ์อัจฉริยะที่ช่วยติดตามและวิเคราะห์ข้อมูลการออกกำลังกาย เช่น สมาร์ทวอทช์ สายรัดข้อมือ และอุปกรณ์วัดอัตราการเต้นของหัวใจ ช่วยให้การออกกำลังกายมีประสิทธิภาพและปลอดภัยมากขึ้น</string>
+		<key>title</key>
+		<string>Fitness Gadget</string>
+	</dict>
+	<key>whey</key>
+	<dict>
+		<key>description</key>
+		<string>เวย์โปรตีนเป็นโปรตีนคุณภาพสูงที่สกัดจากนมวัว มีกรดอะมิโนจำเป็นครบถ้วน ช่วยเสริมสร้างกล้ามเนื้อและฟื้นฟูร่างกายหลังออกกำลังกาย เหมาะสำหรับผู้ที่ต้องการเพิ่มมวลกล้ามเนื้อและผู้ที่ออกกำลังกายเป็นประจำ</string>
+		<key>title</key>
+		<string>Whey Protein</string>
+	</dict>
+</dict>
+</plist>

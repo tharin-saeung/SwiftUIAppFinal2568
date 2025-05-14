@@ -20,6 +20,7 @@
 		306468DB2DD3F607001A68F6 /* watch.png in Resources */ = {isa = PBXBuildFile; fileRef = 306468D92DD3F607001A68F6 /* watch.png */; };
 		306468DC2DD3F607001A68F6 /* amino.png in Resources */ = {isa = PBXBuildFile; fileRef = 306468D62DD3F607001A68F6 /* amino.png */; };
 		306468DD2DD3F607001A68F6 /* equipment.png in Resources */ = {isa = PBXBuildFile; fileRef = 306468D72DD3F607001A68F6 /* equipment.png */; };
+		306468DF2DD3FDBA001A68F6 /* productDetail.plist in Resources */ = {isa = PBXBuildFile; fileRef = 306468DE2DD3FDBA001A68F6 /* productDetail.plist */; };
 		30FCC3302DD3225000745018 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC32F2DD3225000745018 /* ProductDetailView.swift */; };
 		30FCC3322DD3294300745018 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3312DD3294300745018 /* AddFoodView.swift */; };
 		30FCC3342DD32CE200745018 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FCC3332DD32CE200745018 /* FoodItem.swift */; };
@@ -100,6 +101,7 @@
 		306468D72DD3F607001A68F6 /* equipment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = equipment.png; sourceTree = "<group>"; };
 		306468D82DD3F607001A68F6 /* preworkout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preworkout.png; sourceTree = "<group>"; };
 		306468D92DD3F607001A68F6 /* watch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watch.png; sourceTree = "<group>"; };
+		306468DE2DD3FDBA001A68F6 /* productDetail.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = productDetail.plist; sourceTree = "<group>"; };
 		30FCC32F2DD3225000745018 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		30FCC3312DD3294300745018 /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
 		30FCC3332DD32CE200745018 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				E1A900ED2DD2914700DF6E8A /* UserAuth.swift */,
 				E1A901132DD3591A00DF6E8A /* AlertManager.swift */,
 				E1A901192DD3591A00DF6E8A /* plistLoader.swift */,
+				306468DE2DD3FDBA001A68F6 /* productDetail.plist */,
 				E1A901152DD3591A00DF6E8A /* exerciseData.plist */,
 				E1A901162DD3591A00DF6E8A /* foodData.plist */,
 				E1A901172DD3591A00DF6E8A /* snackData.plist */,
@@ -436,6 +439,7 @@
 				E1A901312DD3591A00DF6E8A /* Bodyweight_Lower body.mp4 in Resources */,
 				E1A901322DD3591A00DF6E8A /* Shopee.png in Resources */,
 				E1A901332DD3591A00DF6E8A /* Weight training_Back.mp4 in Resources */,
+				306468DF2DD3FDBA001A68F6 /* productDetail.plist in Resources */,
 				E1A901342DD3591A00DF6E8A /* Lower body.png in Resources */,
 				E1A901352DD3591A00DF6E8A /* Abs.png in Resources */,
 				E1A901362DD3591A00DF6E8A /* shopData.plist in Resources */,

@@ -11,6 +11,20 @@ struct ProductDetailView: View {
     let productName: String
     let imageName: String
 
+    
+    // 🧠 โหลดคำอธิบายจาก plist
+        var productDescription: String {
+            guard let url = Bundle.main.url(forResource: "productDetail", withExtension: "plist"),
+                  let data = try? Data(contentsOf: url),
+                  let plist = try? PropertyListSerialization.propertyList(from: data, format: nil),
+                  let dict = plist as? [String: [String: String]],
+                  let detail = dict[imageName]?["description"] else {
+                return "ไม่พบรายละเอียดสำหรับสินค้า \(productName)"
+            }
+            return detail
+        }
+
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 24) {
@@ -29,11 +43,12 @@ struct ProductDetailView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.white)
 
-                // รายละเอียดสินค้า
-                Text("รายละเอียดสินค้า \(productName) จะมาใส่ทีหลัง...")
-                    .foregroundColor(.white.opacity(0.85))
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
+                // รายละเอียดจาก plist
+                Text(productDescription)
+                .foregroundColor(.white.opacity(0.85))
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+
 
                 Spacer(minLength: 40)
             }
