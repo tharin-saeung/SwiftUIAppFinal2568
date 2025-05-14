@@ -24,14 +24,11 @@ enum ExerciseStatus: String, Codable {
 }
 
 struct TrackingView: View {
-    var exercises: [WorkoutItem]
     @EnvironmentObject var exerciseState: ExerciseState
+
+
     private var db = Firestore.firestore()
 
-    public init(exercises: [WorkoutItem]) {
-        self.exercises = exercises
-    }
-    
     var body: some View {
         VStack(spacing: 16) {
             headerView
@@ -180,9 +177,6 @@ struct TrackingView: View {
 }
 
 #Preview {
-    TrackingView(exercises: [
-        WorkoutItem(name: "Crunches", reps: "15", rest: "30s"),
-        WorkoutItem(name: "Plank", reps: "60s", rest: "45s")
-    ])
-    .environmentObject(ExerciseState())
+    TrackingView()
+        .environmentObject(ExerciseState())
 }

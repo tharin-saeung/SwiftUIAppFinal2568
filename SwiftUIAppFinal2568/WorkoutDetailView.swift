@@ -11,7 +11,6 @@ struct WorkoutDetailView: View {
     var muscleGroup: String
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var exerciseState: ExerciseState
-    @State private var goToTracking = false
 
     // ดึง exercise ตามกล้ามเนื้อที่เลือก
     var exercises: [WorkoutItem] {
@@ -105,7 +104,6 @@ struct WorkoutDetailView: View {
             Button(action: {
                 print("✅ Use this table tapped for \(muscleGroup)")
                 exerciseState.selectedExercises = exercises
-                goToTracking = true
             }) {
                 Text("Use this table")
                     .fontWeight(.bold)
@@ -116,10 +114,6 @@ struct WorkoutDetailView: View {
                     .cornerRadius(12)
             }
             .padding(.horizontal)
-            NavigationLink(destination: TrackingView(exercises: exerciseState.selectedExercises),
-                           isActive: $goToTracking) {
-                EmptyView()
-            }
         }
         .padding()
         .background(Color(hex: "#2F195F").edgesIgnoringSafeArea(.all))
