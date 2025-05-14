@@ -84,7 +84,6 @@
 		E1A901392DD3591A00DF6E8A /* Bodyweight_Upper body.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E1A9010A2DD3591A00DF6E8A /* Bodyweight_Upper body.mp4 */; };
 		E1A9013A2DD3591A00DF6E8A /* Weight training.png in Resources */ = {isa = PBXBuildFile; fileRef = E1A901002DD3591A00DF6E8A /* Weight training.png */; };
 		E1A9013B2DD3591A00DF6E8A /* Bodyweight_Abs.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E1A901052DD3591A00DF6E8A /* Bodyweight_Abs.mp4 */; };
-		E1A9013D2DD3BAC400DF6E8A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A9013C2DD3BAC100DF6E8A /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,7 +162,6 @@
 		E1A901172DD3591A00DF6E8A /* snackData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = snackData.plist; sourceTree = "<group>"; };
 		E1A901182DD3591A00DF6E8A /* shopData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = shopData.plist; sourceTree = "<group>"; };
 		E1A901192DD3591A00DF6E8A /* plistLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plistLoader.swift; sourceTree = "<group>"; };
-		E1A9013C2DD3BAC100DF6E8A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,7 +251,6 @@
 				3028DAC42DD221A100E56379 /* RegisterView.swift */,
 				3028DAC62DD2220B00E56379 /* GoalSelectionView.swift */,
 				E161D9E92DC22C1D00F0D451 /* ContentView.swift */,
-				E1A9013C2DD3BAC100DF6E8A /* MainView.swift */,
 				E161D9EB2DC22C1E00F0D451 /* Assets.xcassets */,
 				E161D9ED2DC22C1E00F0D451 /* Preview Content */,
 				E1A900F12DD2A81800DF6E8A /* NavigationBarConfig.swift */,
@@ -469,7 +466,6 @@
 				30FCC33C2DD3A8AE00745018 /* WorkoutStyleSelectionView.swift in Sources */,
 				95454EB92DCE24BC00DD5D75 /* LoginView.swift in Sources */,
 				3028DACD2DD252B600E56379 /* DashboardView.swift in Sources */,
-				E1A9013D2DD3BAC400DF6E8A /* MainView.swift in Sources */,
 				3028DACB2DD2511E00E56379 /* MainTabView.swift in Sources */,
 				30FCC33A2DD3489F00745018 /* DrawerLayoutView.swift in Sources */,
 				E10CE2122DD25983009B0821 /* AuthService.swift in Sources */,

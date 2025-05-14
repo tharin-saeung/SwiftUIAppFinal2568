@@ -22,12 +22,11 @@ struct RegisterView: View {
     @State private var lastNameError: String?
     
     @State private var isRegistered = false
-    @State private var isLoggedIn = false
     @EnvironmentObject  var  userAuth: UserAuth
     @State private var isNavigationBarHidden = true
 
     var body: some View {
-        NavigationStack {
+        NavigationStack() {
             VStack(spacing: 16) {
                 Spacer()
                 Group {
@@ -38,28 +37,28 @@ struct RegisterView: View {
                     if let emailError = emailError {
                         Text(emailError).foregroundColor(.red).font(.caption)
                     }
-
+                    
                     CustomSecureField(label: "Password", text: $password)
                         .autocapitalization(.none)
                         .autocorrectionDisabled()
                     if let passwordError = passwordError {
                         Text(passwordError).foregroundColor(.red).font(.caption)
                     }
-
+                    
                     CustomSecureField(label: "Verify Password", text: $verifyPassword)
                         .autocapitalization(.none)
                         .autocorrectionDisabled()
                     if let verifyPasswordError = verifyPasswordError {
                         Text(verifyPasswordError).foregroundColor(.red).font(.caption)
                     }
-
+                    
                     CustomRoundedField(label: "First Name", text: $firstName)
                         .keyboardType(.alphabet)
                         .autocorrectionDisabled()
                     if let firstNameError = firstNameError {
                         Text(firstNameError).foregroundColor(.red).font(.caption)
                     }
-
+                    
                     CustomRoundedField(label: "Last Name", text: $lastName)
                         .keyboardType(.alphabet)
                         .autocorrectionDisabled()
@@ -68,15 +67,15 @@ struct RegisterView: View {
                     }
                 }
                 
-                    Spacer()
-                    Button("Register") {
-                        register()
-                    }
-                    .buttonStyle(FilledButtonStyle())
-                    .navigationDestination(isPresented: $isRegistered) {
-                        GoalSelectionView()
-                    }
-                    Spacer()
+                Spacer()
+                Button("Register") {
+                    register()
+                }
+                .buttonStyle(FilledButtonStyle())
+                .navigationDestination(isPresented: $isRegistered) {
+                    GoalSelectionView().navigationBarBackButtonHidden(true)
+                }
+                Spacer()
             }
             .padding()
             .background(Color(hex: "#2F195F").edgesIgnoringSafeArea(.all))
@@ -85,9 +84,6 @@ struct RegisterView: View {
             .onAppear {
                 self.isNavigationBarHidden = true
             }
-        }
-        .onAppear() {
-            self.userAuth.toggleRegistering()
         }
     }
 
@@ -113,7 +109,6 @@ struct RegisterView: View {
             if wasRegistered {
                 self.login() // login after register
                 self.isRegistered = true
-                self.userAuth.toggleRegistering()
             } else {
                 DispatchQueue.main.async {
                     self.lastNameError = "Registration failed. Please try again."
@@ -255,24 +250,12 @@ private func invalidFirstName(_ value: String) -> String? {
     if value.isEmpty {
         return "First name is required."
     }
-    if !containsLowerCase(value) {
-        return "First name must contain at least 1 lowercase"
-    }
-    if !containsUpperCase(value) {
-        return "First name must contain at least 1 uppercase"
-    }
-    if value.count < 3 {
-        return "First name must contain at least 3 characters"
-    }
     return nil
 }
 
 private func invalidLastName(_ value: String) -> String? {
     if value.isEmpty {
         return "Last name is required."
-    }
-    if !containsUpperCase(value) {
-        return "Last name must contain at least 1 uppercase"
     }
     return nil
 }

@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseFirestore
 
 struct DrawerLayoutView: View {
     @State private var isDrawerOpen = false
-    @State private var selectedGoals: [String] = ["Fat Loss"]
+    @State private var selectedGoals: [String] = []
     @State private var isGoalPickerExpanded = false
 
-    let allGoals = ["Fat Loss", "Weight Gain", "Muscle Building"]
+    let allGoals = ["Fat Loss", "Weight Gain", "Just exercise For Health"]
     @State public var disableSettings = false
 
     var body: some View {
@@ -42,6 +44,7 @@ struct DrawerLayoutView: View {
                             }
                         } label: {
                             HStack {
+                                Spacer()
                                 Text("🎯 Your Goal")
                                     .font(.headline)
                                     .foregroundColor(.white)
@@ -54,8 +57,12 @@ struct DrawerLayoutView: View {
                         if isGoalPickerExpanded {
                             ForEach(allGoals, id: \.self) { goal in
                                 Button(action: {
-                                    selectedGoals = [goal] // เปลี่ยนเป้าหมายใหม่
-                                    isGoalPickerExpanded = false
+                                    if selectedGoals.contains(goal) {
+                                        selectedGoals.removeAll { $0 == goal }
+                                    } else {
+                                        selectedGoals.append(goal)
+                                    }
+                                    updateGoalsInFirebase()
                                 }) {
                                     HStack {
                                         Text(goal)
@@ -109,6 +116,51 @@ struct DrawerLayoutView: View {
                     Spacer()
                 }
                 Spacer()
+            }
+        }
+        .onAppear {
+            fetchGoalsFromFirebase()
+        }
+    }
+
+    private func fetchGoalsFromFirebase() {
+        guard let userID = Auth.auth().currentUser?.uid else {
+            print("User not logged in")
+            return
+        }
+
+        let db = Firestore.firestore()
+        let userRef = db.collection("users").document(userID)
+
+        userRef.getDocument { document, error in
+            if let error = error {
+                print("Error fetching goals: \(error.localizedDescription)")
+                return
+            }
+
+            if let document = document, document.exists {
+                if let goals = document.data()?["goals"] as? [String] {
+                    selectedGoals = goals
+                }
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+
+    private func updateGoalsInFirebase() {
+        guard let userID = Auth.auth().currentUser?.uid else {
+            print("User not logged in")
+            return
+        }
+
+        let db = Firestore.firestore()
+        let userRef = db.collection("users").document(userID)
+        userRef.setData(["goals": selectedGoals], merge: true) { error in
+            if let error = error {
+                print("Error updating goals: \(error.localizedDescription)")
+            } else {
+                print("Goals successfully updated.")
             }
         }
     }

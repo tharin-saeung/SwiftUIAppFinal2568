@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseFirestore
 
 struct Goal: Identifiable, Hashable {
     let id = UUID()
@@ -14,7 +16,9 @@ struct Goal: Identifiable, Hashable {
 }
 
 struct GoalSelectionView: View {
+    
     @State private var selectedGoals: Set<Goal> = []
+    @State private var shouldNavigate = false
     
     let goals: [Goal] = [
         Goal(title: "Fat Loss", imageName: "fatloss"),
@@ -23,6 +27,7 @@ struct GoalSelectionView: View {
     ]
     
     var body: some View {
+        NavigationView {
             ScrollView {
                 VStack(spacing: 20) {
                     Text("Choose Your Goals")
@@ -68,8 +73,21 @@ struct GoalSelectionView: View {
                         .padding(.horizontal)
                     }
                     
-                    Button("Continue") {
-                        print(selectedGoals.map { $0.title })
+                    Button(action: {
+                        AuthService.shared.saveGoals(selectedGoals: selectedGoals) { success in
+                            if success {
+                                shouldNavigate = true
+                            } else {
+                                print("Failed to save goals.")
+                            }
+                        }
+                    }) {
+                        HStack{
+                            Spacer()
+                            Text("Continue")
+                            Spacer()
+                        }
+                        .contentShape(Rectangle())
                     }
                     .font(.headline)
                     .padding()
@@ -77,13 +95,21 @@ struct GoalSelectionView: View {
                     .background(Color.white)
                     .foregroundColor(.purple)
                     .cornerRadius(14)
+                    .contentShape(Rectangle())
                     .padding(.horizontal)
                     .padding(.top)
+                    
+                    NavigationLink(
+                        destination: DrawerLayoutView().navigationBarBackButtonHidden(true),
+                        isActive: $shouldNavigate,
+                        label: { EmptyView() }
+                    )
                 }
                 .padding(.bottom)
             }
             .background(Color(hex: "#2F195F").edgesIgnoringSafeArea(.all))
         }
+    }
 }
 
 struct GoalSelectionView_Previews: PreviewProvider {
@@ -91,4 +117,3 @@ struct GoalSelectionView_Previews: PreviewProvider {
         GoalSelectionView()
     }
 }
-
