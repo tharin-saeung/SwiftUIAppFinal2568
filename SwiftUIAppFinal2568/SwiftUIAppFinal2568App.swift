@@ -24,9 +24,9 @@ struct SwiftUIAppFinal2568App: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
-        let mainView = MainView().environmentObject(UserAuth())
+        let contentView = ContentView().environmentObject(UserAuth())
         WindowGroup {
-            mainView
+            contentView
         }
     }
 }

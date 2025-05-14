@@ -10,10 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var userAuth: UserAuth
     var body: some View {
-        if userAuth.isRegistering {
-            RegisterView()
-        } else {
-            DrawerLayoutView()
-        }
+        LoginView()
     }
 }

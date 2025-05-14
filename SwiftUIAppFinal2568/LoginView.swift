@@ -29,7 +29,7 @@ struct LoginView: View {
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(spacing: 20) {
                 Spacer()
                 Image("FlexGenius")
@@ -92,6 +92,11 @@ struct LoginView: View {
                     .padding(.horizontal)
                     .disabled(loginButtonDisabled)
                     
+                    NavigationLink(destination: DrawerLayoutView().navigationBarBackButtonHidden(true), isActive: $isLoggedIn) {
+                        EmptyView()
+                    }
+                    .hidden()
+                    
                     Text("Don't have an account?")
                         .font(.footnote)
                         .foregroundColor(.white)
@@ -122,7 +127,7 @@ struct LoginView: View {
             .onAppear {
                 self.isNavigationBarHidden = true
             }
-        } // ปิด NavigationView
+        } // ปิด NavigationStack
     } // ปิด body
 }
 

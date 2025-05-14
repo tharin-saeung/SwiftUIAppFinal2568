@@ -97,8 +97,8 @@ class AuthService {
                     let user = User(email: email, userUID: userUID)
                     completion(user, nil)
                 }
-        
-        }
+                
+            }
     }
     
     public func checkAuth() -> Bool {
@@ -106,6 +106,26 @@ class AuthService {
             return false
         } else {
             return true
+        }
+    }
+    
+    
+    public func saveGoals(selectedGoals: Set<Goal>, completion: @escaping (Bool) -> Void) {
+        guard let userID = Auth.auth().currentUser?.uid else {
+            completion(false)
+            return
+        }
+        
+        let selectedGoalTitles = selectedGoals.map { $0.title }
+        let db = Firestore.firestore()
+        
+        db.collection("users").document(userID).setData(["goals": selectedGoalTitles], merge: true) { error in
+            if let error = error {
+                print("Error saving goals: \(error.localizedDescription)")
+                completion(false)
+            } else {
+                completion(true)
+            }
         }
     }
 }
