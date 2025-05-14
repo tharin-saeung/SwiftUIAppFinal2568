@@ -11,10 +11,10 @@ import FirebaseFirestore
 
 struct DrawerLayoutView: View {
     @State private var isDrawerOpen = false
-    @State private var selectedGoals: [String] = ["Fat Loss"]
+    @State private var selectedGoals: [String] = []
     @State private var isGoalPickerExpanded = false
 
-    let allGoals = ["Fat Loss", "Weight Gain", "Muscle Building"]
+    let allGoals = ["Fat Loss", "Weight Gain", "Just exercise For Health"]
     @State public var disableSettings = false
 
     var body: some View {
